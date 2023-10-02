@@ -28,3 +28,27 @@ cout << s;`
 getline(cin, s);
 cout << s;`
 - for single character -> use char takes less space (256 characters)
+
+## switch
+`
+int day;
+cin >> day;
+switch(day) {
+  case 1:
+    cout << "Monday";
+  case 2:
+    cout << "Tuesday";
+  case 3:
+    cout << "Wednesday";
+  case 4:
+    cout << "Thursday";
+  case 5:
+    cout << "Friday";
+  case 6:
+    cout << "Saturday";
+  case 7:
+    cout << "Sunday";
+}
+// if a  case is found to be true, everything after that is true
+// thus, need to add break statements after every case
+`
