@@ -59,3 +59,17 @@ switch(day) {
 ## array
 - only same kind of data can be stored `int arr[5];` if any element is double, will trim itself to be int
 - 2D `int arr
+
+## string 
+- len of string
+```
+string s;
+cin >> s;
+cout << s.size(); // length of string
+```
+
+## loops 
+- while
+- for / nested for
+- do-while
+- 
