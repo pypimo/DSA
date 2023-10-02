@@ -56,3 +56,6 @@ switch(day) {
 // if a  case is found to be true, everything after that is true
 // thus, need to add break statements after every case
 ```
+## array
+- only same kind of data can be stored `int arr[5];` if any element is double, will trim itself to be int
+- 2D `int arr
