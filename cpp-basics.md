@@ -49,6 +49,9 @@ switch(day) {
   case 7:
     cout << "Sunday";
   cout << "Hello World"; //not executed, if switch statement has break keyword
+  default:
+    cout << "invalid";
+  // without break, everything is executed in sequence
 }
 // if a  case is found to be true, everything after that is true
 // thus, need to add break statements after every case
