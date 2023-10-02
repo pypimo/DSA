@@ -72,4 +72,11 @@ cout << s.size(); // length of string
 - while
 - for / nested for
 - do-while
-- 
+
+
+## functions (flow goes to the function)
+- void
+- non-void (MUST ALWAYS have a return type) --> else returns a garbage value 
+- parameterised
+- non-parameterised
+- passing by reference --> 
