@@ -30,7 +30,7 @@ cout << s;`
 - for single character -> use char takes less space (256 characters)
 
 ## switch
-`
+```
 int day;
 cin >> day;
 switch(day) {
@@ -48,7 +48,8 @@ switch(day) {
     cout << "Saturday";
   case 7:
     cout << "Sunday";
+  cout << "Hello World"; //not executed, if switch statement has break keyword
 }
 // if a  case is found to be true, everything after that is true
 // thus, need to add break statements after every case
-`
+```
