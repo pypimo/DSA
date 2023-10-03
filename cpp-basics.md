@@ -20,9 +20,11 @@
 - double 1e308
 - long double 2e4932
 - string separated by space and endline
-`string s;
+```
+string s;
 cin >> s;
-cout << s;`
+cout << s;
+```
 - to get the complete string (only separated by endline)
 `string s;
 getline(cin, s);
