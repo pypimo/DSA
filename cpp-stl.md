@@ -54,6 +54,6 @@ while (token != NULL) {
 ## reverse a string
 ```
 string s = "gsgfs";
-cout << reverse(s.begin(), s.end()); // way1
-cout << strrev(s.begin(), s.end()); //way2
+reverse(s.begin(), s.end());
+cout << s;
 ```
