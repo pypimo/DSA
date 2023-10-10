@@ -49,3 +49,11 @@ while (token != NULL) {
   // get the next token i.e. word before second empty space
   // NULL indicates we are using the same pointer we used previously i.e. quote
 }
+```
+
+## reverse a string
+```
+string s = "gsgfs";
+cout << reverse(s.begin(), s.end()); // way1
+cout << strrev(s.begin(), s.end()); //way2
+```
