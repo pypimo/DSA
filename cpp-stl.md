@@ -57,3 +57,11 @@ string s = "gsgfs";
 reverse(s.begin(), s.end());
 cout << s;
 ```
+
+# multiset
+```
+multiset<ll> s;
+s.insert(k);
+auto it = s.upper_bound(k);
+s.erase(it);
+```
