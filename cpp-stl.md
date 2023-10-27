@@ -28,7 +28,9 @@ converts num to string, so string s = to_string(num);
 ## substr(pos, no. of items)  --> STRING SLICING
 ```
 string str;
-str.substr(3, 2);
+str.substr(3, 2); // pos, no of items
+str.substr(pos); //everything *after* a pos
+
 ```
 ## toupper() & tolower()
 ```
