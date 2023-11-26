@@ -1,15 +1,15 @@
 # INTRO
 
-graphs - vertex/nodes , edges
-undirected vs directed graph
-path in graph - each node appears once, adjacent nodes have an edge in between = each node is reachable
-cycles in a graph - start from a node and end at the same node, can have multiple cyclec
-graph can be acyclic - binary trees
-undirected cyclic graph
-directed acyclic graph (DAG)
-undiected - degree of node D(n) = no. of edges connected to node --> total degree = 2*total edges
-directed - indegree, outdegree
-edge weights
+- graphs - vertex/nodes , edges
+- undirected vs directed graph
+- path in graph - each node appears once, adjacent nodes have an edge in between = each node is reachable
+- cycles in a graph - start from a node and end at the same node, can have multiple cyclec
+- graph can be acyclic - binary trees
+- undirected cyclic graph
+- directed acyclic graph (DAG)
+- undiected - degree of node D(n) = no. of edges connected to node --> total degree = 2*total edges
+- directed - indegree, outdegree
+- edge weights
 
 # REPRESENTATION
 adjacency matrix = O(n^2), space = N*N
