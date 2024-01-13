@@ -1,5 +1,5 @@
 # array to linked list
-```
+```cpp
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
@@ -52,4 +52,11 @@ int main() {
 
 	return 0;
 }
+```
+
+## deletion
+```cpp
+Node* temp = head;
+head = head->next;
+delete temp;
 ```
