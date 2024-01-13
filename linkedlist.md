@@ -54,9 +54,19 @@ int main() {
 }
 ```
 
-## deletion
+## delete head
 ```cpp
 Node* temp = head;
 head = head->next;
 delete temp;
 ```
+## delete tail
+```cpp
+while (temp->next->next!=NULL) {
+  temp = temp->next;
+}
+temp->next=nullptr;
+```
+## insert at nth node
+- prev->next should point to after->next, similarly change the data
+## insertion
