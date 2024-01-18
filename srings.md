@@ -1,4 +1,6 @@
 ## reversing string
 1. reverse(str.begin(), str.end())
-2. swap(s[i], s[n-i])
-3. string s = string(s.rbegin(), s.rend());
+   - no return type
+3. swap(s[i], s[n-i])
+4. string s = string(s.rbegin(), s.rend())
+   - returns a string
