@@ -67,6 +67,54 @@ while (temp->next->next!=NULL) {
 }
 temp->next=nullptr;
 ```
+
+## deletion at pos
+```cpp
+Node *deleteNode(Node *head, int pos)
+{
+	if (head==NULL) return head;
+	Node* temp = head;
+	int ct=0;
+	while(ct<pos-1 && temp->next!=NULL) {
+		temp = temp->next;
+		ct++;
+	}
+	if (pos==0) {
+		head = temp->next;
+		delete temp;
+		return head;
+	}
+	if (ct==pos-1 && (temp->next!=NULL && temp->next->next!=NULL)) {
+		Node* xtra = temp->next;
+		temp->next = temp->next->next;
+		delete xtra; 
+	}
+	return head;
+    // Write your code here.
+}
+
+```
+
 ## insert at nth node
 - prev->next should point to after->next, similarly change the data
 ## insertion
+```cpp
+Node * insert(Node * head, int n, int pos, int val) {
+    Node* newNode = new Node(val);
+    Node* temp = head;
+    int ct=0;
+    while(ct<pos-1) {
+        temp = temp->next;
+        ct++; 
+    }
+    if (pos == 0 || head==NULL) {
+        newNode->next = head;
+        head = newNode;
+        return head;
+    }
+    
+    newNode->next = temp->next;
+    temp->next = newNode;
+    return head;
+}
+```
