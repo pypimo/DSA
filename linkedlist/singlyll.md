@@ -131,6 +131,7 @@ temp->next = newNode;
 return head;
 ```
 ## reverse linked list
+```
 if (head==NULL) return head;
 Node* temp=head;
 Node* prev = NULL;
@@ -142,3 +143,4 @@ while(temp!=head){
 }
 head = prev;
 return head;
+```
