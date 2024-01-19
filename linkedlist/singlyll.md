@@ -115,9 +115,18 @@ Node* insert(Node* head, int n, int pos, int val) {
     return head;
 }
 ```
-    
-    newNode->next = temp->next;
-    temp->next = newNode;
-    return head;
-}
+## insertoin head
 ```
+Node* newNode = Node(int val);
+newNode->next = head;
+head = newNode;
+return head;
+```
+## insetion tail
+```
+while (temp->next!=NULL) {
+	temp = temp->next;
+}
+temp->next = newNode;
+```
+return head;
