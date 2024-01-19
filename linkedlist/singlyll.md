@@ -128,5 +128,17 @@ while (temp->next!=NULL) {
 	temp = temp->next;
 }
 temp->next = newNode;
+return head;
 ```
+## reverse linked list
+if (head==NULL) return head;
+Node* temp=head;
+Node* prev = NULL;
+while(temp!=head){
+	Node* xtra = temp->next;
+ 	temp->next= prev;
+	prev = temp;
+ 	temp=xtra;
+}
+head = prev;
 return head;
