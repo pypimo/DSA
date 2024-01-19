@@ -70,24 +70,24 @@ temp->next=nullptr;
 
 ## deletion
 ```cpp
-Node *deleteNode(Node *head, int pos)
+Node* deleteNode(Node* head, int pos)
 {
 	if (head==NULL) return head;
 	Node* temp = head;
-	int ct=0;
-	while(ct<pos-1 && temp->next!=NULL) {
-		temp = temp->next;
-		ct++;
-	}
 	if (pos==0) {
-		head = temp->next;
-		delete temp;
+		head=head->next;
 		return head;
 	}
-	if (ct==pos-1 && (temp->next!=NULL && temp->next->next!=NULL)) {
-		Node* xtra = temp->next;
-		temp->next = temp->next->next;
-		delete xtra; 
+	int ct=0;
+	Node* prev=NULL;
+	while (temp!=NULL) {
+		if (ct==pos) {
+			prev->next=prev->next->next;
+		} 
+		// dont use 'else' here bcz then it will enter infinite while
+			prev=temp;
+			temp=temp->next;
+			ct++;
 	}
 	return head;
 }
