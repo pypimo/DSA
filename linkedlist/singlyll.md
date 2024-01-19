@@ -68,7 +68,7 @@ while (temp->next->next!=NULL) {
 temp->next=nullptr;
 ```
 
-## deletion at pos
+## deletion
 ```cpp
 Node *deleteNode(Node *head, int pos)
 {
@@ -90,13 +90,9 @@ Node *deleteNode(Node *head, int pos)
 		delete xtra; 
 	}
 	return head;
-    // Write your code here.
 }
-
 ```
 
-## insert at nth node
-- prev->next should point to after->next, similarly change the data
 ## insertion
 ```cpp
 Node * insert(Node * head, int n, int pos, int val) {
