@@ -95,19 +95,26 @@ Node* deleteNode(Node* head, int pos)
 
 ## insertion
 ```cpp
-Node * insert(Node * head, int n, int pos, int val) {
+Node* insert(Node* head, int n, int pos, int val) {
     Node* newNode = new Node(val);
-    Node* temp = head;
-    int ct=0;
-    while(ct<pos-1) {
-        temp = temp->next;
-        ct++; 
-    }
-    if (pos == 0 || head==NULL) {
+    if (pos == 0) {
         newNode->next = head;
         head = newNode;
         return head;
     }
+    Node* temp = head;
+    int cnt=0;
+    while(temp!=NULL) {
+        if (cnt==pos-1) {
+            newNode->next = temp->next;
+            temp->next = newNode;
+        } 
+        temp = temp->next;
+        cnt++;
+    }
+    return head;
+}
+```
     
     newNode->next = temp->next;
     temp->next = newNode;
