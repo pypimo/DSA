@@ -115,14 +115,14 @@ Node* insert(Node* head, int n, int pos, int val) {
     return head;
 }
 ```
-## insertoin head
+## insertion head
 ```cpp
 Node* newNode = Node(int val);
 newNode->next = head;
 head = newNode;
 return head;
 ```
-## insetion tail
+## insertion tail
 ```cpp
 while (temp->next!=NULL) {
 	temp = temp->next;
