@@ -144,3 +144,16 @@ while(temp!=head){
 head = prev;
 return head;
 ```
+## length
+```
+int length(Node* head) {
+	int cnt=0;
+	Node* temp=head;
+	while (temp) {
+		cout << temp->data << " ";
+		temp = temp->next;
+		cnt++;
+	}
+	return cnt;
+}
+```
