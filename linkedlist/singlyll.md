@@ -116,14 +116,14 @@ Node* insert(Node* head, int n, int pos, int val) {
 }
 ```
 ## insertoin head
-```
+```cpp
 Node* newNode = Node(int val);
 newNode->next = head;
 head = newNode;
 return head;
 ```
 ## insetion tail
-```
+```cpp
 while (temp->next!=NULL) {
 	temp = temp->next;
 }
@@ -131,7 +131,7 @@ temp->next = newNode;
 return head;
 ```
 ## reverse linked list
-```
+```cpp
 if (head==NULL) return head;
 Node* temp=head;
 Node* prev = NULL;
@@ -145,7 +145,7 @@ head = prev;
 return head;
 ```
 ## length
-```
+```cpp
 int length(Node* head) {
 	int cnt=0;
 	Node* temp=head;
