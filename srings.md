@@ -6,3 +6,5 @@
    - returns a string
 5. substrings
  - s.subtr(start, no. of letters)
+6. string to int -> stoi()
+   7. int to string to_string()
