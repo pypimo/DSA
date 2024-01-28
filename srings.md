@@ -4,3 +4,5 @@
 3. swap(s[i], s[n-i])
 4. string s = string(s.rbegin(), s.rend())
    - returns a string
+5. substrings
+ - s.subtr(start, no. of letters)
