@@ -81,4 +81,7 @@ cout << s.size(); // length of string
 - non-void (MUST ALWAYS have a return type) --> else returns a garbage value 
 - parameterised
 - non-parameterised
-- passing by reference --> 
+- passing by reference -->
+
+## sort
+- has no return value
