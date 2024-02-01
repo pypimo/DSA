@@ -8,3 +8,10 @@
     }
     return -1;
 ```
+
+## binary search
+returns true or false
+## lower bound
+returns index of first values >=target
+## upper bound
+returns index of first value > target
