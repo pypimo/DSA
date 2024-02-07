@@ -73,4 +73,8 @@ multiset erase takes O(m) time complexity, m being the number of elements in a s
 vector erase takes O(n) time complexity since elements have to be shifted by one position
 
 # multimap
-multiple elements can have the same keys
+- multiple elements can have the same keys
+- m[key] = value doesnt work
+- use instead m.insert({key,value});
+- default ascedning order sort
+- sort in desc -> multimap<int,char, greater<int>>
