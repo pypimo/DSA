@@ -73,4 +73,4 @@ multiset erase takes O(m) time complexity, m being the number of elements in a s
 vector erase takes O(n) time complexity since elements have to be shifted by one position
 
 # multimap
-same keys can have different values
+multiple elements can have the same keys
