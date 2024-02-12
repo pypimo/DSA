@@ -7,4 +7,5 @@ for (int i=0; i<n; i++) {
 }
 ```
 
+- moore's voting algo O(n) time, O(1) space
 - 
