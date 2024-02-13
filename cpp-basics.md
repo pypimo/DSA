@@ -8,7 +8,7 @@
 - writing this, std is used for all functions
 
 ## <bits/stdc++.h>
-- includes all the libraries in c++
+includes all the libraries in c++
 
 ## comments //
 
@@ -63,7 +63,7 @@ switch(day) {
 - 2D `int arr
 
 ## string 
-- len of string
+len of string
 ```
 string s;
 cin >> s;
@@ -84,9 +84,10 @@ cout << s.size(); // length of string
 - passing by reference -->
 
 ## sort
-- has no return value
+has no return value
 
-  ## ascii code: a --> 65, A --> 97
+## ascii code: a --> 65, A --> 97
+add 25 to each to get z=90, Z=122
 
 ## round()
 to round down
@@ -94,6 +95,9 @@ to round down
 ## stoi()
 https://www.geeksforgeeks.org/stdstoi-function-in-cpp/
 converts string to num, string s = stoi(num);
+
+## to_string
+int to string
 
 ## min({1,2,3})
 min of multiple values
@@ -107,63 +111,3 @@ get type of variable, Pc = pointer
 ## pop_back vs back()
 pop_back just removes the last member from the vector but it doesnt return anything
 thus, cant do: cout << v.pop_back();
-
-# string methods
-
-## to_string
-converts num to string, so string s = to_string(num);
-
-## substr(pos, no. of items)  --> STRING SLICING
-```
-string str;
-str.substr(3, 2); // pos, no of items
-str.substr(pos); //everything *after* a pos
-
-```
-## toupper() & tolower()
-```
-char c = toupper('a'); // if char type not specified, it returns int of
-char c2 = tolower('A');
-```
-
-## strtok
-https://www.geeksforgeeks.org/strtok-strtok_r-functions-c-examples/
-```
-char str[] = "Geeks-for-Geeks";
-char* token = strtok(str, " - ");
- 
-while (token != NULL) {
- cout << token << " ";
-  token = strtok(NULL, " - ");
-  
-  // get the next token i.e. word before second empty space
-  // NULL indicates we are using the same pointer we used previously i.e. quote
-}
-```
-
-## reverse a string
-```
-string s = "gsgfs";
-reverse(s.begin(), s.end());
-cout << s;
-```
-
-# multiset
-```
-multiset<ll> s;
-s.insert(k);
-auto it = s.upper_bound(k);
-s.erase(it);
-```
-
-# s.erase()
-multiset erase takes O(m) time complexity, m being the number of elements in a set
-vector erase takes O(n) time complexity since elements have to be shifted by one position
-
-# multimap
-- multiple elements can have the same keys
-- m[key] = value doesnt work
-- use instead m.insert({key,value});
-- default ascedning order sort
-- sort in desc -> multimap<int,char, greater<int>>
-
