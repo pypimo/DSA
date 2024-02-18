@@ -10,6 +10,10 @@
 ## <bits/stdc++.h>
 includes all the libraries in c++
 
+# data type ranges (32 bit)
+- int: -1e9 to 1e9
+- long long: -1e18 to 1e18
+
 ## comments //
 
 ## data types
