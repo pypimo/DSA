@@ -136,3 +136,7 @@ void funcname(int &num) {
 void func(int arr[]) {
   arr[0]+=100; //changes made to original array
 }
+```
+## time space complexity 
+- when something /=10 eg digits in a number = floor(log num)+1
+- since default base 10
