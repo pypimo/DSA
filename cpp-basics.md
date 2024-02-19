@@ -112,3 +112,27 @@ get type of variable, Pc = pointer
 ## pop_back vs back()
 pop_back just removes the last member from the vector but it doesnt return anything
 thus, cant do: cout << v.pop_back();
+
+## pass by value vs reference
+- by value
+  - funcname(int num)
+  - copy is created inside the function
+  - changes made are made tp the copy of var
+- by reference
+  - funcname(int &num)
+  - function takes the address of num
+  - changes made are made to the actually var
+```
+void funcname(int num) {
+  num+=10; // changes made to copy
+}
+void funcname(int &num) {
+  num+=10; // changes made to original
+}
+```
+- arrays are by default passed by reference by default
+- but maps, sets, vectors etc all are passed by copy
+```
+void func(int arr[]) {
+  arr[0]+=100; //changes made to original array
+}
