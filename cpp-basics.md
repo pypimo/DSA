@@ -94,10 +94,11 @@ to round down
 
 ## stoi()
 https://www.geeksforgeeks.org/stdstoi-function-in-cpp/
-converts string to num, string s = stoi(num);
+- converts string to num, int n = stoi(str);
 
-## to_string
-int to string
+## to_string()
+- int to string
+- string s = to_string(num)
 
 ## min({1,2,3})
 min of multiple values
