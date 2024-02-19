@@ -16,11 +16,15 @@ m.count(k); // returns the no. of times key k is present
 - so if (m.count(k) && m[k]!=val...) {do..}
 
 ## ordered vs unordered maps
-## time 
-- insertion - logn
+- ordered (order is maintained) using tree
+  - insertion - logn
+  - lookup - logn
+- unordered
+  - insertion - O(1) best case | O(N) average,worst case
+  - lookup - O(1) best case | O(N) average,worst case
 
 # strings
-# reversing string
+## reversing string
 ```
     reverse(str.begin(), str.end())
         no return type
