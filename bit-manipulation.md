@@ -1,5 +1,4 @@
-binary rep of 9 = 1001
-c (rightmost bit is least sig)
+- binary rep of 9 = 1001 (rightmost bit is least sig)
 
 ## odd vs even
 LSB = 1 -> odd
