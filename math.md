@@ -55,3 +55,31 @@ x = x^y
 y = x^y
 x = x^y
 ```
+
+## obv: set bits
+```
+setbits in A = X
+setbits in B = Y
+setbits in A^B = Z
+if X+Y is odd, Z is odd
+if X+Y is even, Z is even
+```
+reason: if xor had no chnage then z = x+y, but if even one setbit was same, loss of 2 setbits in z
+
+## X = X^A^B
+```
+// a different way to write instead of
+if (X==B) X=A;
+else if (X==A) X=B;
+```
+
+## A+B
+```
+A+B = (A^B) + 2(A&B)
+A+B = (A|B) + (A&B)
+```
+## counting setbits
+```
+__builtin_popcount(x); //for int
+__builtin_popcountll(x); //for long long
+```
