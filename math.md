@@ -1,3 +1,10 @@
+binary rep of 9 = 1001
+bianry rep of 10 = 1010 (rightmost bit is least sig)
+
+## odd vs even
+LSB = 1 -> odd
+LSB = 0 -> even
+
 ## xor(^)
 ```
 n ^ 0 = n
