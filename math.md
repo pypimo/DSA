@@ -30,4 +30,10 @@ else no
 3. set kth bit `x | (1<<k)`
 4. unset kth bit `x & ~(1<<k)`
 
-## 
+## multiply/divide by 2 raised to k
+```
+x << k // mutliple
+x >> k // divide
+```
+
+###
