@@ -36,4 +36,22 @@ x << k // mutliple
 x >> k // divide
 ```
 
-###
+## swapping numbers x,y
+1. temp var
+```
+z = x 
+x = y
+y = z
+```
+2. without xtra var
+```
+a = a+b
+b = a-b
+a = a-b
+```
+3. using xor
+```
+x = x^y
+y = x^y
+x = x^y
+```
