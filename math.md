@@ -9,7 +9,10 @@ for (int i = 1; i <= min(num1, num2); i++) {
 ```
 - Time Complexity: O(N)
 - Space Complexity: O(1)
-### euclid's theorem
+### euclid's theorem (WHY??)
 ```
-
+int gcd(int a, int b) {
+	if (!b) return a;
+	return gcd(b,a%b); 
+} 
 ```
