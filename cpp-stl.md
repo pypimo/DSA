@@ -62,7 +62,20 @@ while (token != NULL) {
   // NULL indicates we are using the same pointer we used previously i.e. quote
 }
 ```
-
+## getline
+- to get a complete line as input
+```
+string str;
+getline(cin, str);
+```
+## isstream
+```
+stringstream iss(str);
+while (iss >> word) {
+    // word oper
+    cout << word << '\n';
+}
+```
 # multiset
 ```
 multiset<ll> s;
