@@ -147,7 +147,8 @@ void func(int arr[]) {
 string str;
 for (int i=0; i<str.size(); i++) {
   if (s[i]=='(') {} // should be single apostrophe
-} 
+}
+```
 ## time space complexity 
 - when something /=10 eg digits in a number = floor(log num)+1
 - since default base 10
