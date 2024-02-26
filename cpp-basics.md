@@ -1,7 +1,6 @@
 ## tricks to increase code speed
 - use `ios::sync_with_stdio(0); cin.tie(0)` in class function or main func
 - use `for (auto x : nums )` rather than `for (int i=0; i<nums.size(); i++)`
-- 
 ## libraries (use #include)
 - iostream (input/output)
 - math.h
