@@ -100,6 +100,9 @@ https://www.geeksforgeeks.org/stdstoi-function-in-cpp/
 - converts string to num, int n = stoi(str);
 - out of range https://stackoverflow.com/questions/29931827/stoi-causes-out-of-range-error
 
+## stol
+- if number is long then stoi can contain the num
+
 ## to_string()
 - int to string
 - string s = to_string(num)
