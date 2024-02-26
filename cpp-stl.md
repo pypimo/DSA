@@ -27,10 +27,10 @@ m.count(k); // returns the no. of times key k is present
 ## reversing string
 ```
     reverse(str.begin(), str.end())
-        no return type
+        //no return type
     swap(s[i], s[n-i])
     string s = string(s.rbegin(), s.rend())
-        returns a string
+        //returns a string
     substrings
 
     s.subtr(start, no. of letters)
