@@ -141,6 +141,14 @@ void func(int arr[]) {
   arr[0]+=100; //changes made to original array
 }
 ```
+## string compare
+- can't use double apostrophes `""` for character compare in a string
+- since str[i] is a character
+```
+string str;
+for (int i=0; i<str.size(); i++) {
+  if (s[i]=='(') {} // should be single apostrophe
+} 
 ## time space complexity 
 - when something /=10 eg digits in a number = floor(log num)+1
 - since default base 10
