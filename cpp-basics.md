@@ -98,6 +98,7 @@ to round down
 ## stoi()
 https://www.geeksforgeeks.org/stdstoi-function-in-cpp/
 - converts string to num, int n = stoi(str);
+- out of range https://stackoverflow.com/questions/29931827/stoi-causes-out-of-range-error
 
 ## to_string()
 - int to string
