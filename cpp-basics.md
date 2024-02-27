@@ -78,7 +78,6 @@ cout << s.size(); // length of string
 - for / nested for
 - do-while
 
-
 ## functions (flow goes to the function)
 - void
 - non-void (MUST ALWAYS have a return type) --> else returns a garbage value 
@@ -156,3 +155,8 @@ for (int i=0; i<str.size(); i++) {
 ## time space complexity 
 - when something /=10 eg digits in a number = floor(log num)+1
 - since default base 10
+
+## type conversion
+int(chr) converts character chr to int
+// a number with 1e5 digits can be written as 1e(1e5)
+// since nos like 1e7 have 7 digits
