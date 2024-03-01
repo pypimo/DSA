@@ -5,3 +5,7 @@
 3. perfect bt - all leaf nodes are at same level
 4. balanced bt - height = log n (no of nodes)
 5. degenerate - like a linked list, each node has  only 1 child
+## traversals
+1. inorder - left root right
+2. pre-order - root left right
+3. post-order -  left right root
