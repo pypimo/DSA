@@ -6,6 +6,9 @@
 4. balanced bt - height = log n (no of nodes)
 5. degenerate - like a linked list, each node has  only 1 child
 ## traversals
+### dfs
 1. inorder - left root right
 2. pre-order - root left right
 3. post-order -  left right root
+### bfs 
+just write level by level
