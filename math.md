@@ -16,3 +16,9 @@ int gcd(int a, int b) {
 	return gcd(b,a%b); 
 } 
 ```
+## modular arithmetic
+- if negative numbers
+- eg: -27%10 calculate 27%10=7
+- then do 10-7=3
+
+- eg2 : -7%11 = 11-7=4
