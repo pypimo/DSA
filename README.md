@@ -3,6 +3,8 @@
 - cpp stl (maps, sets)
 - arrays - moores voting algo, dutch national flag
 - strings
+- basic math
+- bit manipulation
 - single linked lists
 - binary search
 - dp 1d, 2d
