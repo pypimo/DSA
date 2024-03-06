@@ -160,5 +160,4 @@ int length(Node* head) {
 
 ## Floyd’s Cycle-Finding Algorithm
 https://www.youtube.com/watch?v=PvrxZaH_eZ4
-
-
+- imagine this like spinning planets, the faster a planet completes its revolution, the more often it can be spotted from the slower planet
