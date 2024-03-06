@@ -44,4 +44,15 @@ vector<int> preorderTraversal(TreeNode* root) {
 ```
 ## max height
 - recursive - O(n) worst when skewed
+```cpp
+int maxDepth(TreeNode* root) {
+        ios::sync_with_stdio(0);
+        cin.tie(0);
+        
+        if (root==NULL) return 0;
+        int l = maxDepth(root->left);
+        int r = maxDepth(root->right);
+        return 1+max(l,r);
+}
+```
 - level - space worst O(n) when full BT
