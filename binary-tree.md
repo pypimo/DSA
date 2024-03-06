@@ -56,3 +56,36 @@ int maxDepth(TreeNode* root) {
 }
 ```
 - level - space worst O(n) when full BT
+```cpp
+int maxDepth(TreeNode* root) {
+        ios::sync_with_stdio(0);
+        cin.tie(0);
+
+        if (root==NULL) return 0;
+
+        int l=0, now=1, nxt=0;
+        queue<TreeNode*> q;
+        q.push(root);
+
+        while(!q.empty()) {
+            TreeNode* curr = q.front();
+            q.pop();
+            now--;
+            
+            if (curr->left!=NULL) {
+                nxt++;
+                q.push(curr->left);
+            }
+            if (curr->right!=NULL) {
+                nxt++;
+                q.push(curr->right);
+            }
+            if (!now) {
+                l++;
+                now=nxt;
+                nxt=0;
+            }
+        }
+        return l;
+    }
+```
