@@ -76,6 +76,10 @@ while (iss >> word) {
     cout << word << '\n';
 }
 ```
+# set
+- ordered by default in cpp
+- contain only unique values
+- s.find(val) returns an interator to where element is found
 # multiset
 ```
 multiset<ll> s;
