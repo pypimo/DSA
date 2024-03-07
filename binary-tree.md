@@ -5,16 +5,13 @@
 3. perfect bt - all leaf nodes are at same level
 4. balanced bt - height = log n (n= no of nodes)
 5. degenerate - like a linked list, each node has  only 1 child
-## traversals
-### dfs
+## dfs
 1. inorder - left root right
 2. pre-order - root left right
 3. post-order -  left right root
-### bfs 
-just write level by level
-## preorder
+### preorder
 recursive
-```
+```cpp
 void preorder(TreeNode* root, vector<int> &v) {
         if (root==NULL) return;
         v.push_back(root->val);
@@ -23,7 +20,7 @@ void preorder(TreeNode* root, vector<int> &v) {
     }
 ```
 iterative
-```
+```cpp
 vector<int> preorderTraversal(TreeNode* root) {
         ios::sync_with_stdio(0);
         cin.tie(0);
@@ -41,6 +38,32 @@ vector<int> preorderTraversal(TreeNode* root) {
         }
         return ans;
     }
+```
+## bfs
+Level Order Traversal
+```cpp
+vector<vector<int>> levelOrder(TreeNode* root) {
+        ios::sync_with_stdio(0);
+        cin.tie(0);
+        
+        vector<vector<int>> ans;
+        if (root==NULL) return ans;
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty()) {
+            int size = q.size();
+            vector<int> level;
+            for (int i=0; i<size; i++) {
+                TreeNode* Node = q.front();
+                q.pop();
+                level.push_back(Node->val);
+                if (Node->left!=NULL) q.push(Node->left);
+                if (Node->right!=NULL) q.push(Node->right); 
+            }
+            ans.push_back(level);
+        }
+        return ans;
+}
 ```
 ## max height
 - recursive - O(n) worst when skewed
