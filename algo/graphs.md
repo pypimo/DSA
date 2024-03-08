@@ -24,3 +24,23 @@ adjacency list - space = O(2*E)
 vector<int> arr[n+1]; // for unweighted
 vector<pair<int, int>> arr[n+1];
 ```
+# traversals
+- create a visited array (helps for both strongly connected componenets and keeping track of those in queue)
+## BFS 
+- keep adding level by level and mark in visited array
+```
+vis[0]=1;
+q.push(0);
+vector<int> ans;
+while(!q.empty) {
+  int Node = q.front();
+  ans.push_back(u);
+  q.pop();
+  for (auto x : adj[u]) {
+    if (!vis[x]) {
+      vis[x]=1;
+      q.push(x);
+    }
+  }
+}
+```
