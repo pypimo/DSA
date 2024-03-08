@@ -8,7 +8,7 @@
 - graph can be acyclic - binary trees
 - undirected cyclic graph
 - directed acyclic graph (DAG)
-- undiected - degree of node D(n) = no. of edges connected to node --> total degree = 2*total edges
+- undiected - degree of node D(n) = no. of edges connected to node --> total degree = 2*total edges // sunce evrey edge isassciated with 2 nodes
 - directed - indegree, outdegree
 - edge weights
 
