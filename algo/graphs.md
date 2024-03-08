@@ -16,7 +16,7 @@
 adjacency matrix = O(n^2), space = N*N
 ```cpp
 // w = weight
-adj[u][v]=w, adj[v][u]=1; // for undirected graphs
+adj[u][v]=w, adj[v][u]=w; // for undirected graphs
 adj[u][v]=w; // directed graph node from u to v
 ```
 adjacency list - space = O(2*E)
