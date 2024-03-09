@@ -8,5 +8,6 @@
 - single linked lists
 - binary search
 - dp 1d, 2d
-- binary trees 👣
+- binary trees
+- graphs 👣
 - misc: postfix-infix
