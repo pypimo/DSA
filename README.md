@@ -1,4 +1,4 @@
-# DSA - Striver
+# DSA 
 - basics and tricks
 - cpp stl (maps, sets)
 - arrays - moores voting algo, dutch national flag
