@@ -77,9 +77,20 @@ while (iss >> word) {
 }
 ```
 # set
+- implemented as a Red Black Tree (thus worst case is O(log n))
 - ordered by default in cpp
 - contain only unique values
-- s.find(val) returns an interator to where element is found
+- s.find(val) returns an interator to where element is found (if not found s.find(val)==s.end())
+## unordered_set
+- insert(), erase(), find() - O(1) average, O(N) worst
+## set 
+- insert() - O(logN)
+- erase(position)	- O(1)
+- erase(value) - O(logN)
+- erase(first, last) - O(N)
+- clear() - O(N)
+- swap() - constant
+- find(val) - O(log N) 
 # multiset
 ```
 multiset<ll> s;
