@@ -28,7 +28,7 @@ vector<pair<int, int>> arr[n+1];
 - create a visited array (helps for both strongly connected componenets and keeping track of those in queue)
 ## BFS 
 - keep adding level by level and mark in visited array
-```
+```cpp
 vis[0]=1;
 q.push(0);
 vector<int> ans;
@@ -42,5 +42,14 @@ while(!q.empty) {
       q.push(x);
     }
   }
+}
+```
+## DFS
+```cpp
+void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
+        vis[i]=1;
+        for (int j=0; j<c.size(); j++) {
+            if (c[i][j] && !vis[j]) dfs(j,c,vis);
+        }
 }
 ```
