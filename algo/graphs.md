@@ -22,6 +22,7 @@ adj[u][v]=w; // directed graph node from u to v
 ```
 - adjacency list - space = O(|V| + |E|)
 - Handshaking Lemma ∑deg(v)=2|E| = O(|V| + 2|E|) = O(|V| + |E|)
+- worst case is O(V^2) since for a completely connected graph each node is coonected to V-1 nodes
 ```cpp
 vector<int> arr[n+1]; // for unweighted
 vector<pair<int, int>> arr[n+1];
