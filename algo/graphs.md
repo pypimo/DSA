@@ -51,15 +51,15 @@ void bfs( int node, int adj[]) {
     }
 }
 ```
-### space (N=nodes) -> O(N)
-- vis - N
-- queue - N
-- ans - N
-- adj list - N+E
+### space (N=nodes) -> O(V)
+- vis - V
+- queue - V
+- ans - V
+- adj list - V+E
 ### time 
-- q runs for n nodes, O(N)
+- q runs for n nodes, O(V)
 - each time, loop runs on all the neightors O(2E)
-- O(N + 2E)
+- O(V + 2E)
 ## DFS
 ```cpp
 void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
@@ -69,3 +69,13 @@ void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
         }
 }
 ```
+### space (N=nodes) -> O(V)
+- vis - V
+- queue - V
+- ans - V
+- adj list - V+E
+### time 
+- q runs for n nodes, O(V)
+- each time, loop runs on all the neightors O(2E)
+- O(V + 2E)
+`for unidirected graph it is 2E, for directed E`
