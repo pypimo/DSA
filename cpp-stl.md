@@ -76,6 +76,12 @@ while (iss >> word) {
     cout << word << '\n';
 }
 ```
+## append(no. of times, character)
+```cpp
+string ans="";
+map<char, int> m;
+for (auto x : m) ans.append(m[x], x);
+```
 # set
 - implemented as a Red Black Tree (thus worst case is O(log n))
 - ordered by default in cpp
