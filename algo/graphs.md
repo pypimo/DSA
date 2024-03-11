@@ -14,6 +14,8 @@
 
 # REPRESENTATION
 https://stackoverflow.com/questions/33499276/space-complexity-of-adjacency-list-representation-of-graph
+![firefox_3Yl8OheGeq](https://github.com/pypimo/DSA/assets/60395555/8bf53b56-bc8e-4487-ae9e-5486f0b97ab0)
+
 - adjacency matrix = O(n^2), space = N*N
 ```cpp
 // w = weight
