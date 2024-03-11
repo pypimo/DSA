@@ -32,20 +32,23 @@ vector<pair<int, int>> arr[n+1];
 ## BFS 
 - keep adding level by level and mark in visited array
 ```cpp
-vis[0]=1;
-q.push(0);
-vector<int> ans;
-while(!q.empty) {
-  int Node = q.front();
-  ans.push_back(u);
-  q.pop();
-  for (auto x : adj[u]) {
-    if (!vis[x]) {
-      vis[x]=1;
-      q.push(x);
+void bfs( int node, int adj[]) {
+    vis[node]=1;
+    q.push(node);
+    vector<int> ans;
+    while(!q.empty) {
+        int Node = q.front();
+        ans.push_back(u);
+        q.pop();
+        for (auto x : adj[u]) {
+          if (!vis[x]) {
+            vis[x]=1;
+            q.push(x);
+          }
+        }
     }
-  }
 }
+
 ```
 ## DFS
 ```cpp
