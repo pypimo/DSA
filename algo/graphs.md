@@ -13,13 +13,15 @@
 - edge weights
 
 # REPRESENTATION
-adjacency matrix = O(n^2), space = N*N
+https://stackoverflow.com/questions/33499276/space-complexity-of-adjacency-list-representation-of-graph
+- adjacency matrix = O(n^2), space = N*N
 ```cpp
 // w = weight
 adj[u][v]=w, adj[v][u]=w; // for undirected graphs
 adj[u][v]=w; // directed graph node from u to v
 ```
-adjacency list - space = O(2*E)
+- adjacency list - space = O(|V| + |E|)
+- Handshaking Lemma ∑deg(v)=2|E| = O(|V| + 2|E|) = O(|V| + |E|)
 ```cpp
 vector<int> arr[n+1]; // for unweighted
 vector<pair<int, int>> arr[n+1];
