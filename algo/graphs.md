@@ -80,6 +80,39 @@ void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
 - O(V + 2E)
 `for unidirected graph it is 2E, for directed E`
 
+# cycle in undirected graph
+```cpp
+bool detect(int i, vector<int> adj[], int V) {
+    vector<int> vis(V,0);
+    queue<pair<int,int>> q;
+    q.push({i,-1});
+    vis[i]=1;
+    while(!q.empty()) {
+        int node = q.front().first;
+        int parent  = q.front().second;
+        q.pop();
+        for (int x : adj[node]) {
+            if (!vis[x]) {
+                q.push({x, node});
+                vis[x]=1;
+            } else {
+                if (x !=parent) return true;
+            }
+        }
+    }
+    return false;
+}
+// Function to detect cycle in an undirected graph.
+bool isCycle(int V, vector<int> adj[]) {
+       queue<pair<int,int>>q;
+        vector<int> vis(V,0);
+    
+        for (int i=0; i<V; i++) {
+            if (detect(i,adj,V)) return true;
+        }
+        return false;
+}
+```
 # Topological Sorting
 - only vaild for DAG (directed acyclic graph)
 - ordering such that if edges are return, so edge from u->v means u will be befoore v in the ordering
