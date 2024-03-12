@@ -79,3 +79,8 @@ void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
 - each time, loop runs on all the neightors O(2E)
 - O(V + 2E)
 `for unidirected graph it is 2E, for directed E`
+
+# Topological Sorting
+- only vaild for DAG (directed acyclic graph)
+- ordering such that if edges are return, so edge from u->v means u will be befoore v in the ordering
+- not possible for undirected, as both u->v and v->u exist, also for cyclic there's cyclic depedency so 1->2->3->1->2->3...., is not valid
