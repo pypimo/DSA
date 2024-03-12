@@ -81,6 +81,7 @@ void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
 `for unidirected graph it is 2E, for directed E`
 
 # cycle in undirected graph
+## using bfs
 ```cpp
 bool detect(int i, vector<int> adj[], int V) {
     vector<int> vis(V,0);
@@ -106,13 +107,18 @@ bool detect(int i, vector<int> adj[], int V) {
 bool isCycle(int V, vector<int> adj[]) {
        queue<pair<int,int>>q;
         vector<int> vis(V,0);
-    
+
+        //for connected components, also cannot use a single vis array
         for (int i=0; i<V; i++) {
             if (detect(i,adj,V)) return true;
         }
         return false;
 }
 ```
+- if a single vis array then 1->2->3 trverssed (no cycle)
+- if (-1->)4->2, then vis checks that 2 can traverse to 3, and 3 is not a parent thus cycle
+- but that is false, there is no cycle
+## using dfs
 # Topological Sorting
 - only vaild for DAG (directed acyclic graph)
 - ordering such that if edges are return, so edge from u->v means u will be befoore v in the ordering
