@@ -105,3 +105,8 @@ auto it = s.upper_bound(k);
 s.erase(it);
 ```
 multiset erase takes O(m) time complexity, m being the number of elements in a set vector erase takes O(n) time complexity since elements have to be shifted by one position
+# dequeue
+front()
+back()
+pop_front()
+pop_back()
