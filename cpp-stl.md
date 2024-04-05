@@ -46,7 +46,8 @@ str.substr(3, 2); // pos, no of items
 str.substr(pos); //everything *after* a pos
 ```
 - s.erase(pos) - can erase at a position or in a range
-- pop_back() to remove last character
+- pop_back() in string to remove last character
+- push_back() in string to all last character
 - toupper() & tolower()
 char c = toupper('a'); // if char type not specified, it returns int of
 char c2 = tolower('A');
