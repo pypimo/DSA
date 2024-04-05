@@ -48,9 +48,12 @@ str.substr(pos); //everything *after* a pos
 - s.erase(pos) - can erase at a position or in a range
 - pop_back() in string to remove last character
 - push_back() in string to all last character
-- toupper() & tolower()
+- islower(char) & isupper(char) - checking if chars r upper or lowercase
+- toupper(char) & tolower(char)
+```cpp
 char c = toupper('a'); // if char type not specified, it returns int of
 char c2 = tolower('A');
+```
 - strtok
 https://www.geeksforgeeks.org/strtok-strtok_r-functions-c-examples/
 ```
