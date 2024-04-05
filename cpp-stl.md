@@ -24,7 +24,7 @@ m.count(k); // returns the no. of times key k is present
   - lookup - O(1) best case | O(N) average,worst case
 
 # strings
-## reversing string
+- reversing string
 ```
     reverse(str.begin(), str.end())
         //no return type
@@ -37,18 +37,20 @@ m.count(k); // returns the no. of times key k is present
 
     string to int -> stoi() 7. int to string to_string() // negative indexing might not throw error but arr[-1] does NOT return last elemeen // instead takes you 4 bytes(size of last element) back from arr[0]
 ```
-## stoi(str) - string to int
-## to_string(num) - int to string
-## substr(pos, no. of items) --> STRING SLICING
+- stoi(str) - string to int
+- to_string(num) - int to string
+- substr(pos, no. of items) --> STRING SLICING
 ```
 string str;
 str.substr(3, 2); // pos, no of items
 str.substr(pos); //everything *after* a pos
 ```
-## toupper() & tolower()
+- s.erase(pos) - can erase at a position or in a range
+- pop_back() to remove last character
+- toupper() & tolower()
 char c = toupper('a'); // if char type not specified, it returns int of
 char c2 = tolower('A');
-## strtok
+- strtok
 https://www.geeksforgeeks.org/strtok-strtok_r-functions-c-examples/
 ```
 char str[] = "Geeks-for-Geeks";
@@ -62,13 +64,12 @@ while (token != NULL) {
   // NULL indicates we are using the same pointer we used previously i.e. quote
 }
 ```
-## getline
-- to get a complete line as input
+- getline: to get a complete line as input
 ```
 string str;
 getline(cin, str);
 ```
-## isstream
+- isstream
 ```
 stringstream iss(str);
 while (iss >> word) {
