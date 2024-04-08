@@ -117,3 +117,7 @@ pop_front()
 pop_back()
 push_back()
 push_front()
+
+# count()
+- number of times something appears
+- `count(v.begin(), v.end(), k) //to count k;`
