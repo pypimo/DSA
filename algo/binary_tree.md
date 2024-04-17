@@ -39,6 +39,67 @@ vector<int> preorderTraversal(TreeNode* root) {
         return ans;
     }
 ```
+### inorder
+```cpp
+void inorder(TreeNode* root, vector<int> &v) {
+        if (root==NULL) return;
+        inorder(root->left,v);
+        v.push_back(root->val);
+        inorder(root->right,v);
+    }
+```
+iterative
+```cpp
+vector<int> inorderTraversal(TreeNode* root) {
+        //iterative
+        if (root == NULL) return {};
+        vector<int> ans;
+        stack<TreeNode*> st;
+        st.push(root);
+        while(!st.empty()) {
+            TreeNode* curr = st.top();
+            st.pop();
+            while(curr->left!=NULL) {
+                curr = curr->left;
+                st.push(curr);
+            } 
+            ans.push_back(curr->val);
+            if (curr->right != NULL) st.push(curr->right);
+        }
+        return ans;
+    }
+```
+### postorder
+recursive
+```cpp
+void postorder(TreeNode* root, vector<int> &v) {
+        if (root==NULL) return;
+        postorder(root->left,v);
+        postorder(root->right,v);
+        v.push_back(root->val);
+}
+```
+iterative
+```cpp
+vector<int> postorderTraversal(TreeNode* root) {
+        ios::sync_with_stdio(0);
+        cin.tie(0);
+
+        vector<int> postorder;
+        if (root==NULL) return postorder;
+        stack<TreeNode*> st;
+        st.push(root);
+        while(!st.empty()) {
+            TreeNode* curr = st.top();
+            st.pop();
+            postorder.push_back(curr->val);
+            if (curr->left!=NULL) st.push(curr->left);
+            if (curr->right!=NULL) st.push(curr->right);
+        }
+        reverse(postorder.begin(), postorder.end());
+        return postorder;
+    }
+```
 ## bfs
 Level Order Traversal
 ```cpp
