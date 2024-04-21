@@ -34,7 +34,7 @@ vector<pair<int, int>> arr[n+1];
 ## BFS 
 - keep adding level by level and mark in visited array
 ```cpp
-void bfs( int node, int adj[]) {
+void bfs( int node, vector<int> adj[]) {
     vis[node]=1;
     q.push(node);
     vector<int> ans;
