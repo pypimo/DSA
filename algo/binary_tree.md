@@ -229,6 +229,7 @@ public:
 ## top view
 - my intial approach was using a map for node, int to check what dist the source node is at
 - but much better to just insert the pair with node, dist
+https://www.geeksforgeeks.org/problems/top-view-of-binary-tree/1
 ```cpp
 vector<int> topView(Node *root) {   
         vector<int> ans;
