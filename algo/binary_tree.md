@@ -158,3 +158,12 @@ int maxDepth(TreeNode* root) {
         return l;
     }
 ```
+## diameter (longest path b/w 2 nodes), max path sum (path is when adjacent paths have a way => take max sum path)
+
+## boundary traversal
+- left subtree is left boundary
+- right subtree is right boundary
+- leaves are all leaf nodes
+- ans = left + leaves + reverse(right)
+- dont include root since it can be both left or right, just include it in beginning if not leaf
+- level order doesnt work, bcz boundary traversal technically is not tracing, it checks for left right subtree and then defines left right boundary
