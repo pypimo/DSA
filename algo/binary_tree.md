@@ -260,3 +260,41 @@ vector<int> topView(Node *root) {
         return ans;
 }
 ```
+## bottom view
+```cpp
+vector <int> bottomView(Node* root) {
+        vector<int> ans;
+        if (root==NULL) return ans;
+        map<int,vector<int>> m;
+        
+        // level order
+        queue<pair<Node*,int>> q; //node,dist
+        q.push({root,0});
+        
+        while(!q.empty()) {
+            int size  = q.size();
+            map<int,int> m2;
+            while(size--) {
+                Node* curr = q.front().first;
+                int dist = q.front().second;
+                if (m2[dist]) m[dist].push_back(curr->data);
+                else {
+                    m[dist] = {curr->data};
+                }
+                q.pop();
+                 
+                if (curr->left!=NULL) q.push({curr->left, dist-1});
+                if (curr->right!=NULL) q.push({curr->right, dist+1});
+            }
+        }
+       
+        //print
+        for (auto x : m) {
+            for (auto y : x.second) {
+                ans.push_back(y);
+            }
+        }   
+        
+        return ans;
+}
+```
