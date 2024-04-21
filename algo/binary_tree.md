@@ -168,6 +168,7 @@ int maxDepth(TreeNode* root) {
 - dont include root since it can be both left or right, just include it in beginning if not leaf
 - level order doesnt work, bcz boundary traversal technically is not tracing, it checks for left right subtree and then defines left right boundary
 ```
-failed level order bcz it traces the right edges nicely, but this boundary traveresal defines left boundary = left subtree's leftmost and right boundary = right subtree's rightmost
+failed level order bcz it traces the right edges nicely
+but this boundary traveresal defines left boundary = left subtree's leftmost and right boundary = right subtree's rightmost
 reason: https://www.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1
 ```
