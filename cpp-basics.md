@@ -167,7 +167,8 @@ int(chr) converts character chr to int
 - reverse_copy returns the reversed copy to a destination (can be used for vectors, strings etc)
 ```cpp
 string A = "abc";
-string B;
+string B; //destination size should be changed to accomodate
+// true in case of vector, string, etc
 B.resize(A.size()); // make B big enough
 reverse_copy(A.begin(), A.end(), B.begin());
 cout << B << '\n';
