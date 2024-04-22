@@ -160,3 +160,15 @@ for (int i=0; i<str.size(); i++) {
 int(chr) converts character chr to int
 // a number with 1e5 digits can be written as 1e(1e5)
 // since nos like 1e7 have 7 digits
+## iswalnum(ch) 
+- checks is char ch is alphanumeric
+## reverse_copy()
+- reverse (s.begin(), s.end()) reverses in place
+- reverse_copy returns the reversed copy to a destination (can be used for vectors, strings etc)
+```cpp
+string A = "abc";
+string B;
+B.resize(A.size()); // make B big enough
+reverse_copy(A.begin(), A.end(), B.begin());
+cout << B << '\n';
+```
