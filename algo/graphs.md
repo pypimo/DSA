@@ -83,37 +83,37 @@ void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
 # cycle in undirected graph
 ## using bfs
 ```cpp
-bool detect(int i, vector<int> adj[], int V) {
-    vector<int> vis(V,0);
-    queue<pair<int,int>> q;
-    q.push({i,-1});
-    vis[i]=1;
-    while(!q.empty()) {
-        int node = q.front().first;
-        int parent  = q.front().second;
-        q.pop();
-        for (int x : adj[node]) {
-            if (!vis[x]) {
-                q.push({x, node});
-                vis[x]=1;
-            } else {
-                if (x !=parent) return true;
+ bool bfs(vector<int> adj[], int node, vector<int>&vis, queue<pair<int,int>>& q) {
+        q.push({node,-1});
+        while(!q.empty()) {
+            int curr = q.front().first;
+            int parent = q.front().second;
+            vis[curr]=1;
+            q.pop();
+            for (auto x : adj[curr]) {
+                if (!vis[x]) {
+                    vis[x]=1;
+                    q.push({x, curr});
+                } else if (x != parent)
+                  return true;
             }
         }
+        return false;
     }
-    return false;
-}
-// Function to detect cycle in an undirected graph.
-bool isCycle(int V, vector<int> adj[]) {
-       queue<pair<int,int>>q;
-        vector<int> vis(V,0);
 
-        //for connected components, also cannot use a single vis array
+    bool detectCycle(int V, vector<int> adj[]) {
+        // Write your code here.
+        // true when same node visited
+        // false otherwise
+        // check if visited and not a parent
+        queue<pair<int,int>> q;
+        
+        vector<int> vis(V,0);
         for (int i=0; i<V; i++) {
-            if (detect(i,adj,V)) return true;
+            if (!vis[i] && bfs(adj, i, vis,q)) return true;
         }
         return false;
-}
+    }
 ```
 - if a single vis array then 1->2->3 trverssed (no cycle)
 - if (-1->)4->2, then vis checks that 2 can traverse to 3, and 3 is not a parent thus cycle
