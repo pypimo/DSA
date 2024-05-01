@@ -158,3 +158,5 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
     return ans;
 }
 ``` 
+## cycle in directed graph
+- if i use kahn's algo and cannot travel all nodes => cycle is present
