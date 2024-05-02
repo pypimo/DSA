@@ -171,3 +171,4 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
 - eg we insert {10,4} but while visiting another node, we find dist to 4 is 7 so insert {7,4}
 - now our algo explores adjacnt nodes for 4 twice, once with 10 dist and then with 7
 - that is not needed so use sets to erase, but time complexity dosent change as erase takes log V time
+- can use a queue, but it makes no greedy use of analysisng shortset distance first, so its a brute force to visit al nodes an ypdate distances (unnecessary iterations)
