@@ -123,10 +123,8 @@ push_front()
 - `count(v.begin(), v.end(), k) //to count k;`
 
 # priority queue
-```
-priority_queue<a, b, c>
-```
-- default is MAX heap
+`priority_queue<a, b, c>` default is MAX heap
 - a = data type of each element you will store in it
 - b = pq is not a container, b is the container which will store the data elements
 - c = greater<int> for min heap
+``` priority_queue<pair<int,int>, vector<int>, greater<int>> pq;```
