@@ -118,6 +118,7 @@ void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
 - if a single vis array then 1->2->3 trverssed (no cycle)
 - if (-1->)4->2, then vis checks that 2 can traverse to 3, and 3 is not a parent thus cycle
 - but that is false, there is no cycle
+
 ## using dfs
 # Topological Sorting
 - only vaild for DAG (directed acyclic graph)
@@ -160,3 +161,10 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
 ``` 
 ## cycle in directed graph
 - if i use kahn's algo and cannot travel all nodes => cycle is present
+- using dfs, the root is encountered twice, cant just put an element since it might just be another path instead of a cycle
+
+## shortest path in unweighed undirected graph
+- bfs from source, update node distance when encountered for the first time
+## shortest path in weighed directed graph
+- dijkstra
+- after updating ALL djacent nodes, enter only the ones tht got updated {dist, node} in min heap
