@@ -127,4 +127,4 @@ push_front()
 - a = data type of each element you will store in it
 - b = pq is not a container, b is the container which will store the data elements
 - c = greater<int> for min heap
-``` priority_queue<pair<int,int>, vector<int>, greater<int>> pq;```
+```priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;```
