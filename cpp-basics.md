@@ -173,3 +173,13 @@ B.resize(A.size()); // make B big enough
 reverse_copy(A.begin(), A.end(), B.begin());
 cout << B << '\n';
 ```
+## delimiter separation
+```cpp
+        vector<int> tokens;
+        stringstream ss(inputString);
+        string token;
+        char delimiter=',';
+        while (getline(ss, token, delimiter)) { 
+            tokens.push_back(stoi(token)); 
+        }
+```
