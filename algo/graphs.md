@@ -172,3 +172,30 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
 - now our algo explores adjacnt nodes for 4 twice, once with 10 dist and then with 7
 - that is not needed so use sets to erase, but time complexity dosent change as erase takes log V time
 - can use a queue, but it makes no greedy use of analysisng shortset distance first, so its a brute force to visit al nodes an ypdate distances (unnecessary iterations)
+
+## negative edges --> bellman ford
+- look for n-1 times (nth time to check for negative cycle, --> if changes in dist = -ve cycle)
+- travel all edges and update dist
+
+## floyd warshall 
+- multisource distance (dp kind of approach)
+- try to travel via every vertex for each source and destination
+- then update that cost matrix
+- so `cost[src][dest] = cost[src][via] + cost[via][dest] //choose the min or originai vs this`
+- set all cost[node][node]=0, all rest to infiinity
+- then n edge between u->v=wt is wrriten as `cost[u][v]=wt` (if uni=directed just include cost[v][u]=wt)
+```cpp
+  for (via=1; via<=n; via++) {
+    for (int i=1; i<=n; i++) {
+        for (int j=1; j<=n; j++) {
+            cost[i][j] = min(cost[i][j], cost[i][via]+cost[via][j]);
+        }
+    }
+  }
+```
+## minimum spanning tree
+--> wrnong approach (initlially i thought)
+- just taking the minimum edge weights and checking if (u or v) not in visited
+- and make u,v viisted and add weight
+- PROBLEM: if 1,2 has edge (added) then 3,4 edge(added), but 2,3 edge never added
+- but this is a CONNECTED graph --> so our algo is wrong!
