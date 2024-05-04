@@ -206,3 +206,23 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
 - for the initial node, weight=0 node can be anything, parent is -1
 - for others is node is vsisied discard and continue
 - if not than insert the {node,parent} edge and add weight-> this is how yo build the mst
+```cpp
+priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
+  // wt, node, parent
+  pq.push({0,1});
+  int s=0;
+  while(!pq.empty()) {
+    int node = pq.top().second;
+    int d = pq.top().first;
+    pq.pop();
+
+    if (vis[node]) continue;
+	// insert (node,parent) edge in mst
+    s += d;
+    for (auto x : adj[node]) {
+      if (vis[x.first]) continue;
+      pq.push({x.second, x.first});
+    }
+    vis[node]=1;
+  }
+```
