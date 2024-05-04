@@ -193,9 +193,16 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
     }
   }
 ```
-## minimum spanning tree
+# minimum spanning tree
 --> wrnong approach (initlially i thought)
 - just taking the minimum edge weights and checking if (u or v) not in visited
 - and make u,v viisted and add weight
 - PROBLEM: if 1,2 has edge (added) then 3,4 edge(added), but 2,3 edge never added
 - but this is a CONNECTED graph --> so our algo is wrong!
+## prims's  algo
+- start at an arbitraary node and trave using edges to that node ONLY
+- so the prioritu queue has
+- WEIGHT, NODE, PARENT
+- for the initial node, weight=0 node can be anything, parent is -1
+- for others is node is vsisied discard and continue
+- if not than insert the {node,parent} edge and add weight-> this is how yo build the mst
