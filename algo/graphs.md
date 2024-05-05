@@ -226,3 +226,89 @@ priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
     vis[node]=1;
   }
 ```
+# Disjoint Sets
+- using rank (somewhat similar to height of tree)
+- using size (equivalent to total number of nodes)
+## By Rank
+```cpp
+class DisjointSet {
+    vector<int> sz, parent;
+    public: 
+    DisjointSet(int n)  {
+        sz.resize(n+1, 0);
+        parent.resize(n+1);
+        for (int i=0; i<=n; i++) {
+            parent[i]=i;
+        }
+    }
+
+    int findParent(int u) {
+        if (u==parent[u]) return u;
+        return parent[u]=findParent(parent[u]);
+    }
+
+    void unionBySize(int u, int v) {
+        int ult_u = findParent(u), ult_v = findParent(v);
+        if (sz[ult_u]<sz[ult_v]) {
+            // no rank increase
+            sz[ult_u]
+            parent[ult_u] = ult_v;
+        } else if (sz[ult_u]>sz[ult_v]) {
+            // no rank increase
+            parent[ult_v] = ult_u;
+        } else {
+            sz[ult_u]+sz[ult_v];
+            parent[ult_v] = ult_u;
+        }
+    }
+};
+```
+## By Size
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+class DisjointSet {
+    vector<int> sz, parent;
+    public: 
+    DisjointSet(int n)  {
+        sz.resize(n+1, 0);
+        parent.resize(n+1);
+        for (int i=0; i<=n; i++) {
+            parent[i]=i;
+        }
+    }
+
+    int findParent(int u) {
+        if (u==parent[u]) return u;
+        return parent[u]=findParent(parent[u]);
+    }
+
+    void unionBySize(int u, int v) {
+        int ult_u = findParent(u), ult_v = findParent(v);
+        if (sz[ult_u]<sz[ult_v]) {
+            // no rank increase
+            sz[ult_v]+=sz[ult_u];
+            parent[ult_u] = ult_v;
+        } else {
+            sz[ult_u]+=sz[ult_v];
+            parent[ult_v] = ult_u;
+        }
+    }
+};
+
+int main() {
+    DisjointSet ds(7);
+    ds.unionBySize(1,2);
+    ds.unionBySize(2,3);
+    ds.unionBySize(4,5);
+    ds.unionBySize(6,7);
+    ds.unionBySize(5,6);
+    if (ds.findParent(3)==ds.findParent(7)) cout << "Same tree\n";
+    else cout << "Not same tree\n";
+    ds.unionBySize(3,7);
+    if (ds.findParent(3)==ds.findParent(7)) cout << "Same tree\n";
+    else cout << "Not same tree\n";
+    return 0;
+}
+```
