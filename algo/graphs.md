@@ -312,3 +312,9 @@ int main() {
     return 0;
 }
 ```
+## trick for 2d grids where disoint sets are needed
+- if grid is n*m
+- then let parent and ranks be of sizes n*m
+- now each node instead of being a pair {i,j} with parent as {i,j}
+- the node will be i*n + j with that as parent
+- all nodes/cordinates are represented like thus and then worked on
