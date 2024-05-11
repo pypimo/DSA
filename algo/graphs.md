@@ -318,3 +318,7 @@ int main() {
 - now each node instead of being a pair {i,j} with parent as {i,j}
 - the node will be i*n + j with that as parent
 - all nodes/cordinates are represented like thus and then worked on
+
+
+# tarjan's algo (bridges)
+- brdiges  = any edge when broekn down results in 2 or mre connected coponenets
