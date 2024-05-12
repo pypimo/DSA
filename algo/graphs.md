@@ -319,6 +319,10 @@ int main() {
 - the node will be i*n + j with that as parent
 - all nodes/cordinates are represented like thus and then worked on
 
-
 # tarjan's algo (bridges)
 - brdiges  = any edge when broekn down results in 2 or mre connected coponenets
+- insertion times, as an increasing counter on graph dfs
+- then low[] for lowest time when vis[x] found but x!=parent[node]
+- actually low[] would work by comparing low[node]=min(low[node], low[x]) when dfs is complete
+- but that assumes nodes are connected in sequential order like 0 -> 1 then 2 so on
+- but that is not the case
