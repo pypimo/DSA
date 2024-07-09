@@ -183,3 +183,6 @@ cout << B << '\n';
             tokens.push_back(stoi(token)); 
         }
 ```
+## Time Complexity
+if k jumps in a loop -> complexity is harmonic sum (1/1 + 1/2 + 1/3 + .... 1/k) ~ log k
+`for (int i=1; i<=n; i+=k)` 
