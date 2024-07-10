@@ -186,3 +186,8 @@ cout << B << '\n';
 ## Time Complexity
 if k jumps in a loop -> complexity is harmonic sum (1/1 + 1/2 + 1/3 + .... 1/k) ~ log k
 `for (int i=1; i<=n; i+=k)` 
+
+## nC2 sums needed
+eg 1 3 4 6 
+all sums 1-3, 1-4, 1-6, 3-4, 3-6, 4-6
+a[i]*i - prefix_sum[i]
