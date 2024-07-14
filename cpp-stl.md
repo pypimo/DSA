@@ -14,6 +14,7 @@ m.count(k); // returns the no. of times key k is present
 ```
 - can be used when one wants to check if a key is present and m[k] might be 0
 - so if (m.count(k) && m[k]!=val...) {do..}
+- when `if (!m[key)` is used, {key,0} pair is created in map which ruins map.size()
 
 ## ordered vs unordered maps
 - ordered (order is maintained) using tree
