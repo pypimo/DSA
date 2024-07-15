@@ -82,3 +82,11 @@ A+B = (A|B) + (A&B)
 __builtin_popcount(x); //for int
 __builtin_popcountll(x); //for long long
 ```
+
+## bit rep
+```
+bitset<64> x(num);
+bitset<32> x(num);
+cout << x;
+```
+storing the bit repersntation for `num` in `x`
