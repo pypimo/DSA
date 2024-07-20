@@ -191,3 +191,15 @@ if k jumps in a loop -> complexity is harmonic sum (1/1 + 1/2 + 1/3 + .... 1/k) 
 eg 1 3 4 6 
 all sums 1-3, 1-4, 1-6, 3-4, 3-6, 4-6
 a[i]*i - prefix_sum[i]
+
+## setprecision()
+used for SIGNIFICANT DIGITS (not the ones after decimal but all significant digits)
+```cpp
+double num=0;
+num+=a[i];
+cout << setprecision(5) << num;
+```
+
+WHEN X DECIMAL PLACES ARE NEEDED
+- use fixed keyword
+`cout << fixed << setprecision(n) << float_variable`
