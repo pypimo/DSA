@@ -203,3 +203,8 @@ cout << setprecision(5) << num;
 WHEN X DECIMAL PLACES ARE NEEDED
 - use fixed keyword
 `cout << fixed << setprecision(n) << float_variable`
+
+## stable_sort()
+https://chatgpt.com/share/a6d1e467-ceb5-496e-96d1-eb45ed81de8e
+the sort in cpp doesnt make comparisons in order, so for cases when certain equal values require to maintain the order use stable sort
+`stable_sort(arr.begin(), arr.end(), compare);`
