@@ -174,6 +174,7 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
 - can use a queue, but it makes no greedy use of analysisng shortset distance first, so its a brute force to visit al nodes an ypdate distances (unnecessary iterations)
 
 ## negative edges --> bellman ford
+- dijkstra works fior negative edges ONLY when directed and no negative cycles and using prioirtty qeueu only no visited array,so same node can be visisted but it can give tle if cycles
 - look for n-1 times (nth time to check for negative cycle, --> if changes in dist = -ve cycle)
 - travel all edges and update dist
 
