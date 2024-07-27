@@ -11,6 +11,13 @@
 - undiected - degree of node D(n) = no. of edges connected to node --> total degree = 2*total edges // sunce evrey edge isassciated with 2 nodes
 - directed - indegree, outdegree
 - edge weights
+# complexity
+|V| = E  = V*(V-1)  = |V^2|-|V|
+does E is a much tighter bound
+
+bellamn ford is V*E or V^3
+dijkstra = V^2
+floyd warshall V^3
 
 # REPRESENTATION
 https://stackoverflow.com/questions/33499276/space-complexity-of-adjacency-list-representation-of-graph
