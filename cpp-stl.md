@@ -39,7 +39,13 @@ m.count(k); // returns the no. of times key k is present
     string to int -> stoi() 7. int to string to_string() // negative indexing might not throw error but arr[-1] does NOT return last elemeen // instead takes you 4 bytes(size of last element) back from arr[0]
 ```
 - stoi(str) - string to int
-- to_string(num) - int to string
+- to_string(num) int to string
+- string(len, char)
+  ```
+  //to_string doesnt work on chars, ie to_string('c') !="c"
+  string s(1,'c')
+  ``` 
+- so use
 - substr(pos, no. of items) --> STRING SLICING
 ```
 string str;
