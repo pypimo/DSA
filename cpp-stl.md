@@ -88,6 +88,11 @@ while (iss >> word) {
     cout << word << '\n';
 }
 ```
+- string interpolation
+```cpp
+    // The first placeholder is represented by {0} and is replaced by 
+       string s = format( "My name is {1} and my favorite number is {0}", num, name);
+```
 ## append(no. of times, character)
 ```cpp
 string ans="";
