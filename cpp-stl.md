@@ -23,6 +23,9 @@ m.count(k); // returns the no. of times key k is present
 - unordered
   - insertion - O(1) best case | O(N) average,worst case
   - lookup - O(1) best case | O(N) average,worst case
+ 
+## desceding order map
+`map<int,int, greater<int>> mp;`
 
 # strings
 - reversing string
