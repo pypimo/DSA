@@ -9,5 +9,5 @@
 - binary search
 - dp 1d, 2d
 - binary trees
-- graphs 👣
+- graphs
 - misc: postfix-infix
