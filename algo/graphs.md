@@ -142,6 +142,9 @@ void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
 - not possible for undirected, as both u->v and v->u exist, also for cyclic there's cyclic depedency so 1->2->3->1->2->3...., is not valid
 
 ## using dfs
+add to stack after a dfs call ends
+time: O(v+2E)
+space: O(V) and O(V+E) for adjaceny (ntot 2E cause its always directed)
 ## using bfs - Kahn's algo
 - normal vis bfs technique fails..eg edges 0->1, 0->2, 1->2,
 - then 0 just marks 1,2 visited in no particular order, thus need for indegree, only when indegree is 0 do we insert it in queue
