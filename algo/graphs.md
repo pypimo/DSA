@@ -12,6 +12,15 @@
 - directed - indegree, outdegree
 - edge weights
 # complexity
+## adjacency list
+space: O(V+E) for directed
+space: O(v+2E) : for undirected
+
+## adjacency matrix
+space: O(v*V)
+
+
+# misc nonsense
 |V| = E  = V*(V-1)  = |V^2|-|V|
 does E is a much tighter bound
 
