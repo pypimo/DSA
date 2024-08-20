@@ -358,3 +358,25 @@ int main() {
 - actually low[] would work by comparing low[node]=min(low[node], low[x]) when dfs is complete
 - but that assumes nodes are connected in sequential order like 0 -> 1 then 2 so on
 - but that is not the case
+
+# cycle detection for undirected graphs
+time : O(V+2E) + O(V) (stack space) 
+## using dfs
+- start dfs at a node and keep track of parent
+- mark neighbors visited
+- if any neighbor visisted and not parent return true
+- else return false
+## using bfs
+- start bfs at a node and keep track of parent
+- mark neighbors visited
+- if neighbor visisted and not parent return true
+
+# cycle detection for directed graphs
+time : O(V+2E) + O(V) (stack space) 
+## using dfs
+- start dfs at a node and keep track of parent
+- mark neighbors visited
+- if neighbor visisted and not parent return true
+## using bfs
+- use kahns to get topological ordering
+- if size of topo < n return true (cycle present)
