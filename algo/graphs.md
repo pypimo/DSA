@@ -254,6 +254,7 @@ priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
     vis[node]=1;
   }
 ```
+time: O((V+E)*logV)
 # Disjoint Sets
 - using rank (somewhat similar to height of tree)
 - using size (equivalent to total number of nodes)
