@@ -11,6 +11,7 @@
     return -1;
 ```
 ## lower bound 
+if all elemets strictly smaller return index n
 ```
 while (low <= high) {
         int mid = low+(high-low)/2;
@@ -26,6 +27,7 @@ while (low <= high) {
 }
 ```
 ## upper bound
+if not prsent returns index n
 ```
 while (low <= high) {
         int mid = low+(high-low)/2;
@@ -47,3 +49,4 @@ returns true or false
 returns index of first values >=target
 ## upper bound
 returns index of first value > target
+`upper_bound(arr.begin(), arr.end(), target)-arr.begin();`
