@@ -257,6 +257,10 @@ priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
 # Disjoint Sets
 - using rank (somewhat similar to height of tree)
 - using size (equivalent to total number of nodes)
+time: O(n*log n ) if n disjoint sets
+for kruskal : n*alpha(n) or n*log(n)
+alpha n is amortised ie when inputs start gting large it does not go and for small unputs it grows very slowly
+
 ## By Rank
 ```cpp
 class DisjointSet {
