@@ -374,9 +374,9 @@ time : O(V+2E) + O(V) (stack space)
 # cycle detection for directed graphs
 time : O(V+2E) + O(V) (stack space) 
 ## using dfs
-- start dfs at a node and keep track of parent
-- mark neighbors visited
-- if neighbor visisted and not parent return true
+- for a cycle a node should be visited by any other node already, but it shuold also be in the same path
+- so keep vis and pathVis array
+- n
 ## using bfs
 - use kahns to get topological ordering
 - if size of topo < n return true (cycle present)
