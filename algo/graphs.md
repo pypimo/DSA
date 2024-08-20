@@ -191,12 +191,20 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
 - now our algo explores adjacnt nodes for 4 twice, once with 10 dist and then with 7
 - that is not needed so use sets to erase, but time complexity dosent change as erase takes log V time
 - can use a queue, but it makes no greedy use of analysisng shortset distance first, so its a brute force to visit al nodes an ypdate distances (unnecessary iterations)
+```
+time: O((E+V)*logV)
+space: O(V)
+also V^2 = E but since E can be smaller than V sometimes so (V+E)
+```
+https://stackoverflow.com/questions/26547816/understanding-time-complexity-calculation-for-dijkstra-algorithm
 
 ## negative edges --> bellman ford
-- dijkstra works fior negative edges ONLY when directed and no negative cycles and using prioirtty qeueu only no visited array,so same node can be visisted but it can give tle if cycles
 - look for n-1 times (nth time to check for negative cycle, --> if changes in dist = -ve cycle)
 - travel all edges and update dist
 
+- final loop nth time, if any distance updates - negative cycl 
+time: O(V*E) 
+space : O(V)
 ## floyd warshall 
 - multisource distance (dp kind of approach)
 - try to travel via every vertex for each source and destination
@@ -252,10 +260,10 @@ priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
 ## By Rank
 ```cpp
 class DisjointSet {
-    vector<int> sz, parent;
+    vector<int> rank, parent;
     public: 
     DisjointSet(int n)  {
-        sz.resize(n+1, 0);
+        rank.resize(n+1, 0);
         parent.resize(n+1);
         for (int i=0; i<=n; i++) {
             parent[i]=i;
@@ -269,15 +277,14 @@ class DisjointSet {
 
     void unionBySize(int u, int v) {
         int ult_u = findParent(u), ult_v = findParent(v);
-        if (sz[ult_u]<sz[ult_v]) {
+        if (rank[ult_u]<rank[ult_v]) {
             // no rank increase
-            sz[ult_u]
             parent[ult_u] = ult_v;
         } else if (sz[ult_u]>sz[ult_v]) {
             // no rank increase
             parent[ult_v] = ult_u;
         } else {
-            sz[ult_u]+sz[ult_v];
+            rank[ult_u]++;
             parent[ult_v] = ult_u;
         }
     }
