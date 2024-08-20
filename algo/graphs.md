@@ -376,7 +376,9 @@ time : O(V+2E) + O(V) (stack space)
 ## using dfs
 - for a cycle a node should be visited by any other node already, but it shuold also be in the same path
 - so keep vis and pathVis array
-- n
+- if a neighbor is already vis and path vis and not the parent -> return true (cycle present)
+- when dfs ends set pathVis to 0
+- return false
 ## using bfs
 - use kahns to get topological ordering
 - if size of topo < n return true (cycle present)
