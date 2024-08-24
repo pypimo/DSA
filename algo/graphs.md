@@ -359,7 +359,7 @@ int main() {
 - condition for bridge (only for parent to non-vis adj nodes after being vis) -> because parent nodes havent compleeed their dfs, so their low isnt assigned the lowest, but the children's dfs gets completed first
 - so we only compare after the child nodes finished dfs using low[it] > timer[node] (cant use low[it] > low[node])
 - reason we need to use a timer array, imagine a graph with 8 as node  and 10 as child, now 8 has a path to 3/6 (lowest) so can 10 -> so we can never compare using lows, we can only see that if low[]
-```
+```cpp
 class Solution {
 public:
     int timer=0;
