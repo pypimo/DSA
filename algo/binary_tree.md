@@ -148,6 +148,9 @@ USING ONE FUNCTION ONLY
 ## diameter (longest path b/w 2 nodes), max path sum (path is when adjacent paths have a way => take max sum path)
 ![chrome_MaKoBF5fOo](https://github.com/user-attachments/assets/d57f2c37-0829-425c-a54a-aa6a8fc9724b)
 
+## max path sum
+![chrome_L1wCj4h1Dw](https://github.com/user-attachments/assets/9246eb70-9141-441c-ad69-011394be93af)
+
 ## boundary traversal
 - left subtree is left boundary
 - right subtree is right boundary
