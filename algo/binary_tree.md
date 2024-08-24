@@ -21,8 +21,7 @@ void preorder(TreeNode* root, vector<int> &v) {
 ```
 iterative
 ```cpp
-vector<int> preorderTraversal(TreeNode* root) {
-        
+vector<int> preorderTraversal(TreeNode* root) {    
         vector<int> ans;
         stack<TreeNode*> st;
         if (root==NULL) return {};
@@ -83,9 +82,6 @@ void postorder(TreeNode* root, vector<int> &v) {
 iterative
 ```cpp
 vector<int> postorderTraversal(TreeNode* root) {
-        ios::sync_with_stdio(0);
-        cin.tie(0);
-
         vector<int> postorder;
         if (root==NULL) return postorder;
         stack<TreeNode*> st;
@@ -108,9 +104,6 @@ vector<int> postorderTraversal(TreeNode* root) {
 Level Order Traversal
 ```cpp
 vector<vector<int>> levelOrder(TreeNode* root) {
-        ios::sync_with_stdio(0);
-        cin.tie(0);
-        
         vector<vector<int>> ans;
         if (root==NULL) return ans;
         queue<TreeNode*> q;
@@ -130,54 +123,30 @@ vector<vector<int>> levelOrder(TreeNode* root) {
         return ans;
 }
 ```
+
+
 ## max height
 - recursive - O(n) worst when skewed
 ```cpp
 int maxDepth(TreeNode* root) {
-        ios::sync_with_stdio(0);
-        cin.tie(0);
-        
         if (root==NULL) return 0;
         int l = maxDepth(root->left);
         int r = maxDepth(root->right);
         return 1+max(l,r);
 }
 ```
-- level - space worst O(n) when full BT
-```cpp
-int maxDepth(TreeNode* root) {
-        ios::sync_with_stdio(0);
-        cin.tie(0);
+## check for balanced bt
+- can use 2 functions, bool check and maxDepth
+- after getting maxDepth of left and right check
+- if check(node->left) && check(node->right) && (abs(maxDepth(node->left)-maxDepth(node->right))<=1) return true;
+- return false;
 
-        if (root==NULL) return 0;
+USING ONE FUNCTION ONLY
+![chrome_uhzWLnOLDl](https://github.com/user-attachments/assets/45309f6e-c401-498c-8f30-629bed269bb7)
 
-        int l=0, now=1, nxt=0;
-        queue<TreeNode*> q;
-        q.push(root);
 
-        while(!q.empty()) {
-            TreeNode* curr = q.front();
-            q.pop();
-            now--;
-            
-            if (curr->left!=NULL) {
-                nxt++;
-                q.push(curr->left);
-            }
-            if (curr->right!=NULL) {
-                nxt++;
-                q.push(curr->right);
-            }
-            if (!now) {
-                l++;
-                now=nxt;
-                nxt=0;
-            }
-        }
-        return l;
-    }
-```
 ## diameter (longest path b/w 2 nodes), max path sum (path is when adjacent paths have a way => take max sum path)
+![chrome_MaKoBF5fOo](https://github.com/user-attachments/assets/d57f2c37-0829-425c-a54a-aa6a8fc9724b)
 
 ## boundary traversal
 - left subtree is left boundary
