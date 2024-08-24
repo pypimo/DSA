@@ -5,6 +5,26 @@
 3. perfect bt - all leaf nodes are at same level
 4. balanced bt - height = log n (n= no of nodes)
 5. degenerate - like a linked list, each node has  only 1 child
+```
+class TreeNode {
+public:
+        int val;
+        TreeNode* left;
+        TreeNode* right;
+        TreeNode(int data) {
+                this->val=data;
+                this->left=NULL;
+                this->right=NULL;
+        }
+T        reeNode(int data, TreeNode* l, TreeNode* r) {
+                this->val=data;
+                this->left=l;
+                this->right=r;
+        }
+
+}
+```
+
 ## dfs
 1. inorder - left root right
 2. pre-order - root left right
