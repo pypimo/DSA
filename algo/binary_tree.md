@@ -22,8 +22,6 @@ void preorder(TreeNode* root, vector<int> &v) {
 iterative
 ```cpp
 vector<int> preorderTraversal(TreeNode* root) {
-        ios::sync_with_stdio(0);
-        cin.tie(0);
         
         vector<int> ans;
         stack<TreeNode*> st;
@@ -46,19 +44,40 @@ void inorder(TreeNode* root, vector<int> &v) {
         inorder(root->left,v);
         v.push_back(root->val);
         inorder(root->right,v);
-    }
+        }
 ```
 iterative
 ```cpp
+vector<int> preorderTraversal(TreeNode* root) {
+    vector<int> ans;
+    stack<TreeNode*> st;
+    //visit node, store in stack, move to its left
+    //if null, node=stack.top, print(node), pop stack, move right
+    if (root==NULL) return {};
+    TreeNode* node = root;
+    while(true) {
+        if (node != NULL) {
+            st.push(node);
+            node =node->left;
+        } else {
+            if (!st.size()) break;
+            node=st.top();
+            st.pop();
+            ans.push_back(node->val);
+            node=node->right;
+        }
+    }
+    return ans;
+}
 ```
 ### postorder
 recursive
 ```cpp
 void postorder(TreeNode* root, vector<int> &v) {
-        if (root==NULL) return;
-        postorder(root->left,v);
-        postorder(root->right,v);
-        v.push_back(root->val);
+    if (root==NULL) return;
+    postorder(root->left,v);
+    postorder(root->right,v);
+    v.push_back(root->val);
 }
 ```
 iterative
