@@ -143,3 +143,11 @@ push_front()
 - b = pq is not a container, b is the container which will store the data elements
 - c = greater<int> for min heap
 ```priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;```
+
+# tuple
+- tuples work in priority qeue min heap, `pair<pair<int,int>>` DOES NOT
+```
+tuple<int,int,int> my_tuple;
+make_tuple(x,y,z);
+get<0>(my_tuple); // can access using index
+```
