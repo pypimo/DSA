@@ -9,3 +9,9 @@ O(n)
 TC O(nlogn)
 SC O(n)  ONLY
 recursion stackspace is not O(n) but O(logn) since depth first ie first all merge sorts like n, n/2, n/4 take place only then right half is considered
+
+## dfs inside dfs calls
+- exponenetial!!!!!!!!!!
+- eg if dfs call at one node, calls dfs of others, and visited aray is pass by value, ie you NEED to visit unique path
+- so time complexity is 2 raise to n = pow(2,n) = 2^n
+- for normaldfs
