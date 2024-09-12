@@ -1,10 +1,11 @@
-# mock-1
+# mocks
+## 1
 - sliding window
 https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/description/
 - DSU dont use maps, prove how
 https://leetcode.com/problems/satisfiability-of-equality-equations/description/
 
-# mock-2
+## 2
 https://leetcode.com/problems/maximum-score-of-a-node-sequence/
 
 # g
