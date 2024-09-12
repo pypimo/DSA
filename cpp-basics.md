@@ -73,6 +73,10 @@ cin >> s;
 cout << s.size(); // length of string
 ```
 
+- DO NOT use `ans = ch + ans`
+- this addition takes O(n)
+- rather use `ans+=ch` then reverse ans 
+
 ## loops 
 - while
 - for / nested for
