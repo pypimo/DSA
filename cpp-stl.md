@@ -65,6 +65,7 @@ char c = toupper('a'); // if char type not specified, it returns int of
 char c2 = tolower('A');
 ```
 - strtok
+- string erase overloaded func (https://www.geeksforgeeks.org/stdstringerase-in-cpp/)
 https://www.geeksforgeeks.org/strtok-strtok_r-functions-c-examples/
 ```
 char str[] = "Geeks-for-Geeks";
