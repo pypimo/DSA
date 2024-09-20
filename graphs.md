@@ -141,6 +141,8 @@ void dfs(int i, vector<vector<int>>& c, vector<int> &vis) {
 - ordering such that if edges are return, so edge from u->v means u will be befoore v in the ordering
 - not possible for undirected, as both u->v and v->u exist, also for cyclic there's cyclic depedency so 1->2->3->1->2->3...., is not valid
 
+- to detect cycles, index that stack elements 1 2 3 4..., not check in adjacency matrix, if u->v and pos[u]>pos[v] cycel exists
+
 ## using dfs
 add to stack after a dfs call ends
 time: O(v+2E)
