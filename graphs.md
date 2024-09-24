@@ -179,11 +179,7 @@ vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int V) {
 
     return ans;
 }
-``` 
-## cycle in directed graph
-- if i use kahn's algo and cannot travel all nodes => cycle is present
-- using dfs, the root is encountered twice, cant just put an element since it might just be another path instead of a cycle
-
+```
 ## shortest path in unweighed undirected graph
 - bfs from source, update node distance when encountered for the first time
 ## shortest path in weighed directed graph
