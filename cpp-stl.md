@@ -110,7 +110,7 @@ for (auto x : m) ans.append(m[x], x);
 - contain only unique values
 - s.find(val) returns an interator to where element is found (if not found s.find(val)==s.end())
 - can't use `s.find(val)-s.begin()` to get index unlike using vectors
-- use this instead `distance(s.begin(), it)`
+- use this instead `distance(s.begin(), it)` takes O(n)
 ## unordered_set
 - insert(), erase(), find() - O(1) average, O(N) worst
 ## set functions
