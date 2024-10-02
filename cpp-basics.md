@@ -225,5 +225,5 @@ int d = distance(s.begin(), it);
 - Random-access iterators (like those in vectors, arrays) work in O(1)
 
 ## find 
-- takes O(n) for vectors
+- takes O(n) for vectors - so using lower bound is better
 - set find time compexity = O(log n)
