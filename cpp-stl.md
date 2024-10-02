@@ -103,14 +103,17 @@ string ans="";
 map<char, int> m;
 for (auto x : m) ans.append(m[x], x);
 ```
+
 # set
 - implemented as a Red Black Tree (thus worst case is O(log n))
 - ordered by default in cpp
 - contain only unique values
 - s.find(val) returns an interator to where element is found (if not found s.find(val)==s.end())
+- can't use `s.find(val)-s.begin()` to get index unlike using vectors
+- use this instead `distance(s.begin(), it)`
 ## unordered_set
 - insert(), erase(), find() - O(1) average, O(N) worst
-## set 
+## set functions
 - insert() - O(logN)
 - erase(position)	- O(1)
 - erase(value) - O(logN)
@@ -126,6 +129,7 @@ auto it = s.upper_bound(k);
 s.erase(it);
 ```
 multiset erase takes O(m) time complexity, m being the number of elements in a set vector erase takes O(n) time complexity since elements have to be shifted by one position
+
 # dequeue
 front()
 back()
