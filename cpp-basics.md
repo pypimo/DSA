@@ -212,3 +212,14 @@ WHEN X DECIMAL PLACES ARE NEEDED
 https://chatgpt.com/share/a6d1e467-ceb5-496e-96d1-eb45ed81de8e
 the sort in cpp doesnt make comparisons in order, so for cases when certain equal values require to maintain the order use stable sort
 `stable_sort(arr.begin(), arr.end(), compare);`
+
+## vector vs sets (distance function)
+```
+vector<int> v;
+set<int> s;
+auto it = find(v.begin(), v.end(), val);
+auto it2 = s.find(val);
+int d = distance(s.begin(), it);
+```
+- Non-random-access iterators (like those in sets, maps, or lists) take O(n) time
+- Random-access iterators (like those in vectors, arrays) work in O(1)
