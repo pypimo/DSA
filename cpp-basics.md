@@ -223,3 +223,7 @@ int d = distance(s.begin(), it);
 ```
 - Non-random-access iterators (like those in sets, maps, or lists) take O(n) time
 - Random-access iterators (like those in vectors, arrays) work in O(1)
+
+## find 
+- takes O(n) for vectors
+- set find time compexity = O(log n)
