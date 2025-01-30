@@ -278,7 +278,7 @@ class DisjointSet {
         return parent[u]=findParent(parent[u]);
     }
 
-    void unionBySize(int u, int v) {
+    void unionByRank(int u, int v) {
         int ult_u = findParent(u), ult_v = findParent(v);
         if (rank[ult_u]<rank[ult_v]) {
             // no rank increase
