@@ -283,7 +283,7 @@ class DisjointSet {
         if (rank[ult_u]<rank[ult_v]) {
             // no rank increase
             parent[ult_u] = ult_v;
-        } else if (sz[ult_u]>sz[ult_v]) {
+        } else if (rank[ult_u]>rank[ult_v]) {
             // no rank increase
             parent[ult_v] = ult_u;
         } else {
