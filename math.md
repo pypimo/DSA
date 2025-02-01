@@ -22,3 +22,5 @@ int gcd(int a, int b) {
 - then do 10-7=3
 
 - eg2 : -7%11 = 11-7=4
+
+## parity = odd or even
