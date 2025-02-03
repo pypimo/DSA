@@ -20,15 +20,6 @@ space: O(v+2E) : for undirected
 ## adjacency matrix
 space: O(v*V)
 
-
-# misc nonsense
-|V| = E  = V*(V-1)  = |V^2|-|V|
-does E is a much tighter bound
-
-bellamn ford is V*E or V^3
-dijkstra = V^2
-floyd warshall V^3
-
 # REPRESENTATION
 https://stackoverflow.com/questions/33499276/space-complexity-of-adjacency-list-representation-of-graph
 ![firefox_3Yl8OheGeq](https://github.com/pypimo/DSA/assets/60395555/8bf53b56-bc8e-4487-ae9e-5486f0b97ab0)
