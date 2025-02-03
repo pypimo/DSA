@@ -3,7 +3,7 @@
 - graphs - vertex/nodes , edges
 - undirected vs directed graph
 - path in graph - each node appears once, adjacent nodes have an edge in between = each node is reachable
-- so path cant be 1356 be 12 have edge, 23 have edge, 13 must hv direct edge
+- so 1-3 must hv direct edge for 1-3 to be a path
 - cycles in a graph - start from a node and end at the same node, can have multiple cyclec
 - graph can be acyclic - binary trees
 - undirected cyclic graph
