@@ -1,15 +1,15 @@
 # INTRO
 
-- graphs - vertex/nodes , edges
+- graphs -> vertex/nodes , edges
 - undirected vs directed graph
-- path in graph - each node appears once, adjacent nodes have an edge in between = each node is reachable
+- path in graph -> each node appears once, adjacent nodes have an edge in between = each node is reachable
 - so 1-3 must hv direct edge for 1-3 to be a path
-- cycles in a graph - start from a node and end at the same node, can have multiple cycles, while visiting each node only once
-- graph can be acyclic - binary trees
+- cycles in a graph -> start from a node and end at the same node, can have multiple cycles, while visiting each node only once
+- graph can be acyclic -> binary trees
 - undirected cyclic graph
 - directed acyclic graph (DAG)
-- undiected - degree of node D(n) = no. of edges connected to node --> total degree = 2*total edges // sunce evrey edge isassciated with 2 nodes
-- directed - indegree, outdegree
+- undiected -> degree of node D(n) = no. of edges connected to node --> total degree = 2*total edges // since evrey edge is associated with 2 nodes
+- directed -> indegree, outdegree
 - edge weights
   
 # complexity
