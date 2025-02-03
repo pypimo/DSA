@@ -6,9 +6,10 @@ does E is a much tighter bound
 - dijkstra = V^2
 - floyd warshall V^3
 
-## shortest path in unweighed undirected graph
+## shortest path in unweighed graph (directed/undirected)
 - bfs from source, update node distance when encountered for the first time
-## shortest path in weighed directed graph
+  
+## shortest path in weighed graph (directed/undirected)
 - dijkstra
 - after updating ALL djacent nodes, enter only the ones tht got updated {dist, node} in min heap
 - eg we insert {10,4} but while visiting another node, we find dist to 4 is 7 so insert {7,4}
