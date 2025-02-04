@@ -2,7 +2,7 @@
 ## types
 1. full bt - each node has 0/2 children
 2. complete bt - each level is completely filled xcpt last level (which must have nodes as left as possible)
-3. perfect bt - all leaf nodes are at same level
+3. perfect bt -  each node has 0/2 children and 0 children ones are at same level (leaf nodes)
 4. balanced bt - height = log n (n= no of nodes)
 5. degenerate - like a linked list, each node has  only 1 child
 ```
