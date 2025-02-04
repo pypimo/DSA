@@ -10,7 +10,7 @@ Perfect binary trees are used to implement heap data structures
 They are used to construct threaded binary trees
 They are used in algorithms like heapsort and merge sort
 They are used to organize and search for information quickly
-```
+```cpp
 class TreeNode {
 public:
         int val;
@@ -21,7 +21,7 @@ public:
                 this->left=NULL;
                 this->right=NULL;
         }
-T        reeNode(int data, TreeNode* l, TreeNode* r) {
+        TreeNode(int data, TreeNode* l, TreeNode* r) {
                 this->val=data;
                 this->left=l;
                 this->right=r;
