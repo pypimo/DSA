@@ -24,9 +24,11 @@ also V^2 = E but since E can be smaller than V sometimes so (V+E)
 https://stackoverflow.com/questions/26547816/understanding-time-complexity-calculation-for-dijkstra-algorithm
 
 ## negative edges --> bellman ford
-- look for n-1 times (nth time to check for negative cycle, --> if changes in dist = -ve cycle)
-- travel all edges and update dist
-
+- look for n-1 times (nth time to check for negative cycle, --> if changes in dist = -ve cycle):
+  - n-1 times because for a nodes (if total nodes are n), a unique path can at max contain n-1 edges
+  - if any more than that, then there must be a loop (a vertex is repeated) so shortest path can be shorter
+  - else -ve loop
+- travel all edges and update dist for each node
 - final loop nth time, if any distance updates - negative cycl 
 time: O(V*E) 
 space : O(V)
