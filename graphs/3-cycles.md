@@ -32,9 +32,9 @@ time : O(V+2E) + O(V) (stack space)
 time : O(V+2E) + O(V) (stack space) 
 ## using dfs
 - for a cycle a node should be visited by any other node already, but it shuold also be in the same path
-- so keep vis and pathVis array
-- if a neighbor is already vis and path vis and not the parent -> return true (cycle present)
-- when dfs ends set pathVis to 0
+- so pathVis array (pass by copy at each call)
+- if a neighbor is already path vis -> return true (cycle present)
+- when dfs ends set pathVis to 0 (dont need to since pass by copy)
 - return false
 ## using bfs
 - use kahns to get topological ordering
