@@ -21,3 +21,9 @@ linked lists: insertion and lookup time is O(n)
 arrays: insertion O(n) and lookup time is O(log n)
 search trees: insertion and look up time is O(log n) -> tree always needs to be balanced
 hash table : insertion and look up time is O(1) -> in case of max collissions worst case is O(n)
+
+## complexity of recursive functions
+- make the recursion tree eg n call
+- calc time for each call eg O(1)
+- Final complexity  = complexity of each call * no. of calls
+(Reference[https://www.youtube.com/watch?v=Uv1LpSKZcm4])
