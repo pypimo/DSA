@@ -1,10 +1,15 @@
-# Binary Trees
+# Intro
 ## types
 1. full bt - each node has 0/2 children
 2. complete bt - each level is completely filled xcpt last level (which must have nodes as left as possible)
 3. perfect bt -  each node has 0/2 children and 0 children ones are at same level (leaf nodes)
-4. balanced bt - height = log n (n= no of nodes)
+4. balanced bt - The absolute difference of heights of left and right subtrees at any node is less than 1
 5. degenerate - like a linked list, each node has  only 1 child
+## Uses
+Perfect binary trees are used to implement heap data structures
+They are used to construct threaded binary trees
+They are used in algorithms like heapsort and merge sort
+They are used to organize and search for information quickly
 ```
 class TreeNode {
 public:
