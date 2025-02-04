@@ -18,8 +18,11 @@ public:
             if (!vis[it]) {
                 dfs(it, node, vis,low,tim, adj, ans);
                 low[node] = min(low[node], low[it]);
-                if (low[it] == tim[it]) ans.push_back({node, it}); // WORKS or >= since we know low[it] will never exceed tim[it]
-                if (low[it] > tim[node]) ans.push_back({node, it}); // WORKS 
+                if (low[it] > tim[node]) ans.push_back({node, it});
+                // another method
+                // if (low[it] == tim[it]) ans.push_back({node, it});
+                // WORKS or >= since we know low[it] will never exceed tim[it]
+                
             } else low[node] = min(low[node], low[it]);
         }
     }
