@@ -15,7 +15,7 @@
   - traversals
   - heights
   - ques-types
-  - binary-search-tree
+- binary-search-tree
 - graphs
   - dfs bfs
   - cycle detection (directed/undirected)
