@@ -5,18 +5,26 @@
   - cpp stl (maps, sets)
   - strings
   - postfix-infix
-- arrays - moores voting algo, dutch national flag
-- bit manipulation
+  - arrays - moores voting algo, dutch national flag
 - linked lists
   - single
   - double
-  - ring  
+  - ring
 - binary search
-- dp 1d, 2d
 - binary trees
+  - traversals
+  - heights
+  - ques-types
+  - binary-search-tree
 - graphs
   - dfs bfs
   - cycle detection (directed/undirected)
   - kruskal's prim's
   - dijkstra, bellman, floyd warshall
   - tarjan's algo
+- stacks and queues
+- dp
+  - 1D
+  - 2D
+  - 3D
+- bit manipulation
