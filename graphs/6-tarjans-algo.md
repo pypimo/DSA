@@ -44,6 +44,6 @@ public:
 ```
 ## determining if edge is a bridge
 - we only compare after the child nodes finished dfs using low[it] > timer[node] (cant use low[it] > low[node])
-<br>
+
 ![note](https://github.com/user-attachments/assets/4bb841c2-5cfe-4a84-98d4-527a2697f218)
 
