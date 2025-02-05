@@ -1,13 +1,22 @@
 # DSA 
-- basics and tricks
-- cpp stl (maps, sets)
+- basics
+  - math
+  - tricks
+  - cpp stl (maps, sets)
+  - strings
+  - postfix-infix
 - arrays - moores voting algo, dutch national flag
-- strings
-- basic math
 - bit manipulation
-- single linked lists
+- linked lists
+  - single
+  - double
+  - ring  
 - binary search
 - dp 1d, 2d
 - binary trees
 - graphs
-- misc: postfix-infix
+- dfs bfs
+- cycle detection (directed/undirected)
+- kruskal's prim's
+- dijkstra, bellman, floyd warshall
+- tarjan's algo
