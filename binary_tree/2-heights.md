@@ -18,7 +18,7 @@ USING ONE FUNCTION ONLY
 ![chrome_uhzWLnOLDl](https://github.com/user-attachments/assets/45309f6e-c401-498c-8f30-629bed269bb7)
 
 
-## diameter (longest path b/w 2 nodes), max path sum (path is when adjacent paths have a way => take max sum path)
+## diameter (longest path b/w 2 nodes)
 ![chrome_MaKoBF5fOo](https://github.com/user-attachments/assets/d57f2c37-0829-425c-a54a-aa6a8fc9724b)
 
 ## max path sum
