@@ -18,11 +18,11 @@ int ceilBST(TreeNode* root, int key) {
     while(root) {
         // not needed actualy just write root->val>=key below
         if (key==ceil) {
-            ceil=root;
+            ceil=root->val;
             break;
         }
         if (root->val>key) {
-            ceil=root;
+            ceil=root->val;
             root =root->left;
         } else root=root->right;
     }
