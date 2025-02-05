@@ -24,7 +24,7 @@ int ceilBST(TreeNode* root, int key) {
         if (root->val>key) {
             ceil=root;
             root =root->left;
-        } else root==root->right;
+        } else root=root->right;
     }
     return ceil;
 }
