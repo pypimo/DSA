@@ -15,8 +15,8 @@
 - dp 1d, 2d
 - binary trees
 - graphs
-- dfs bfs
-- cycle detection (directed/undirected)
-- kruskal's prim's
-- dijkstra, bellman, floyd warshall
-- tarjan's algo
+  - dfs bfs
+  - cycle detection (directed/undirected)
+  - kruskal's prim's
+  - dijkstra, bellman, floyd warshall
+  - tarjan's algo
