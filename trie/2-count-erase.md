@@ -75,8 +75,9 @@ class Trie{
     }
 
     void erase(string &word){
+        // if erase was meant for deleting all instances
         // int countWord = countWordsEqualTo(word);
-        int countWord=1;
+        int countWord=1; // one erase deletes only one instance
         if (!countWord) return; // word does not exist
         
         Node* curr = root;
