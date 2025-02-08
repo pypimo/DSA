@@ -32,7 +32,8 @@ public:
 // if n words are inserted
 // insert -> n*(logn + mlognm)
 ```
-## Code Tried
+
+## My Code Version
 ```cpp
 class Node {
 public:
