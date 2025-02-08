@@ -1,7 +1,7 @@
 - if you increment `count[ch]` of the present trie and then create refernce trie for char: hard to know when no string of that type exists
 - instead attach counter to the reference trie of each char
 
-## self-tried
+## Beta Code
 ```cpp
 #include <bits/stdc++.h> 
 class Node {
