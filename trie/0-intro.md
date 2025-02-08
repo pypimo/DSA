@@ -7,9 +7,7 @@ public:
     set<string> words,prefixes;
     // given: n words with m max length
     void insert(string word) {
-        // O( log n ) + O( n*m*log n*m )
-        //since all prefixes of n string, with m length are inserted
-
+        // O(log n ) + O(m*log n*m )
         words.insert(word);
         string inp="";
         for (auto ch: word) {
@@ -19,15 +17,18 @@ public:
     }
     
     bool search(string word) {
-        // O( m*log(n) )
+        // O(log(n) )
         if (words.find(word)!=words.end()) return true;
         return false;
     }
     
     bool startsWith(string prefix) {
-        // O( m*log(nm) )
+        // O(log(nm) )
         if (prefixes.find(prefix)!=prefixes.end()) return true;
         return false;
     }
 };
+
+// if n words are inserted
+// insert -> n*(logn + mlognm)
 ```
