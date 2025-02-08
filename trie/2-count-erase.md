@@ -1,7 +1,9 @@
 - if you increment `count[ch]` of the present trie and then create refernce trie for char: hard to know when no string of that type exists
 - instead attach counter to the reference trie of each char
 
+## self-tried
 ```cpp
+#include <bits/stdc++.h> 
 class Node {
 public:
     Node* links[26];
@@ -20,14 +22,15 @@ public:
     void setEnd() {
         flag++;
     }
-    bool isEnd() {
+    int isEnd() {
         return flag;
     }
     void increaseCount() {
-        ++count; 
+        count++; 
     }
     void decreaseCount(int x) {
         count-=x;
+        if (flag>=x) flag-=x;
     }
     int getCount() {
         return count; 
@@ -35,15 +38,12 @@ public:
 
 };  
 
-class Trie {
-private: 
-    Node *root;
-public:
-    // Node*root = new Node();
-    // way-1
-    Trie() {
-        root = new Node(); // way-2
-    }
+
+class Trie{
+
+    public:
+    Node*root = new Node();
+
     void insert(string word) {
         Node* curr = root;
         for (auto ch: word) {
@@ -54,42 +54,46 @@ public:
         }
         curr->setEnd();
     }
-    
-    bool countSearch(string word) {
+
+    int countWordsEqualTo(string &word){
         Node* curr = root;
         for (auto ch: word) {
-            if (!curr->containsKey(ch)) return false;
+            if (!curr->containsKey(ch)) return 0;
             curr = curr->get(ch);
         }
         return curr->isEnd();
     }
-    
-    int countStartsWith(string prefix) {
+
+    int countWordsStartingWith(string &word){
         Node* curr = root;
-        for (auto ch: prefix) {
-            if (!curr->containsKey(ch)) return false;
+        for (auto ch: word) {
+            if (!curr->containsKey(ch)) return 0;
             curr = curr->get(ch);
         }
     
         return curr->getCount();
     }
 
-    void deleteWord(string word) {
-        int countWord = countSearch(word);
+    void erase(string &word){
+        // int countWord = countWordsEqualTo(word);
+        int countWord=1;
+        if (!countWord) return; // word does not exist
+        
         Node* curr = root;
-        // subtract from each
-        for (auto ch: prefix) {
-            if (!curr->containsKey(ch)) return false;
-            if (curr->get(ch)->getCount()==countWord) curr=new Node();
-            else {
-                curr=curr->get(ch);.
+        for (auto ch: word) {
+            if (curr->get(ch)->getCount()==countWord) {
+                //cout << ch << " hello\n";
+                delete curr->get(ch);
+                curr->links[ch-'a']=NULL;
+                break;
+            } else {
+                curr=curr->get(ch);
                 curr->decreaseCount(countWord);
 
             }
         }
-    
-        return curr->getCount();
+        
     }
-    
 };
+
 ```
