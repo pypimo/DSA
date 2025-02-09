@@ -35,6 +35,9 @@ public:
     int getCount() {
         return count; 
     }
+    void setNull(char ch) {
+        links[ch-'a'] = NULL;
+    }
 
 };  
 
@@ -85,12 +88,11 @@ class Trie{
             if (curr->get(ch)->getCount()==countWord) {
                 //cout << ch << " hello\n";
                 delete curr->get(ch);
-                curr->links[ch-'a']=NULL;
+                curr->setNull(ch);
                 break;
             } else {
                 curr=curr->get(ch);
                 curr->decreaseCount(countWord);
-
             }
         }
         
