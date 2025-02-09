@@ -1,13 +1,13 @@
 - if you increment `count[ch]` of the present trie and then create refernce trie for char: hard to know when no string of that type exists
 - instead attach counter to the reference trie of each char
 
-## Beta Code
+## Code
 ```cpp
 class Node {
 public:
     Node* links[26];
-    int count=0;
-    int flag=0;
+    int countPrefix=0;
+    int endsWith=0;
 
     bool containsKey(char ch) {
         return (links[ch-'a']);
@@ -19,20 +19,20 @@ public:
         links[ch-'a'] = new Node();
     }
     void setEnd() {
-        flag++;
+        endsWith++;
     }
     int isEnd() {
-        return flag;
+        return endsWith;
     }
     void increaseCount() {
-        count++; 
+        countPrefix++; 
     }
     void decreaseCount(int x) {
-        count-=x;
-        if (flag>=x) flag-=x;
+        countPrefix-=x;
+        if (endswith>=x) endswith-=x;
     }
     int getCount() {
-        return count; 
+        return countPrefix; 
     }
     void setNull(char ch) {
         links[ch-'a'] = NULL;
@@ -101,9 +101,9 @@ class Trie{
 ```
 ### LOGIC
 - for `insert`
-    - when any word ends, the `flag` of reference node (of last character) is incremented
-    - when any character is visited, the `count` of its referecen node is incremented
+    - when any word ends, the `endsWith` of reference node (of last character) is incremented
+    - when any character is visited, the `countPrefix` of its referecen node is incremented
 
-- for `countWordsEqualTo` we return the `flag` value of last char
-- for `countWordsStartingWith` we return the `count` value of visited char
+- for `countWordsEqualTo` we return the `endsWith` value of last char
+- for `countWordsStartingWith` we return the `countPrefix` value of visited char
 - for `erase` we delete one instance of every char in path, and decrement flag value when the word ends, if everything becomes zero delete the reference nodes for that char entirely
