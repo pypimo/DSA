@@ -99,3 +99,11 @@ class Trie{
 };
 
 ```
+### LOGIC
+- for `insert`
+    - when any word ends, the `flag` of reference node (of last character) is incremented
+    - when any character is visited, the `count` of its referecen node is incremented
+
+- for `countWordsEqualTo` we return the `flag` value of last char
+- for `countWordsStartingWith` we return the `count` value of visited char
+- for `erase` we delete one instance of every char in path, and decrement flag value when the word ends, if everything becomes zero delete the reference nodes for that char entirely
