@@ -84,15 +84,15 @@ class Trie{
         
         Node* curr = root;
         for (auto ch: word) {
+            // if you need to save memory and delete nodes, otherwise not needed
             if (curr->get(ch)->getCount()==countWord) {
-                //cout << ch << " hello\n";
                 delete curr->get(ch);
                 curr->setNull(ch);
                 break;
-            } else {
-                curr=curr->get(ch);
-                curr->decreaseCount(countWord);
             }
+
+            curr=curr->get(ch);
+            curr->decreaseCount(countWord);
         }
         
     }
