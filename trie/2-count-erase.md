@@ -3,7 +3,6 @@
 
 ## Beta Code
 ```cpp
-#include <bits/stdc++.h> 
 class Node {
 public:
     Node* links[26];
