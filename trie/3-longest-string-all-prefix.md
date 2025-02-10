@@ -52,7 +52,7 @@ public:
         curr->setEnd();
     }
 
-    bool isAns(string word) {
+    bool isCompletePrefix(string word) {
         Node *curr = root;
         for (auto ch : word) {
             if (!curr->get(ch)->isEnd()) return false;
@@ -79,7 +79,7 @@ string completeString(int n, vector<string> &a){
         trie.insertString(a[i]);
     }
     for (int i=0; i<n; i++) {
-        if (trie.isAns(a[i])) ans = compareString(ans, a[i]); 
+        if (trie.isCompletePrefix(a[i])) ans = compareString(ans, a[i]); 
     }
     if (ans=="") return "None";
     return ans;
