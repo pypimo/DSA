@@ -1,21 +1,14 @@
-## Logic
-way-1 (doesnt work) sort the string to find longest prefix string <br>
-1) eg:
-  - a
-  - aaa
-  - ab
-  - abbbb
-
-if ans if abbbb then final ans is set to abbbb
-
-2) eg:
-  - a
-  - aaaa
-  - ab
-  - abbbb
-
-if ans if aaaaa even then final ans is set to abbbb
-
+## Logic 
+- complexity without trie using arrays is O(n*m*m)
+- with trie O(n*m)
+- to optimise further ideas
+  - way-1 (doesnt work) sort the string to find longest prefix string <br>
+    - eg: a,aaa,ab,abbbb -> if ans is abbbb then final ans is set to abbbb
+    - eg: a,aaaa,ab,abbbb -> if ans if aaaaa even then final ans is set to abbbb
+  - way-2
+  ``` // stop when a prefi is not present and dont take that path
+    // instead of checking strings through arr, check them through the root
+    // by using dfs```
 
 ## Beta Code
 ```cpp
