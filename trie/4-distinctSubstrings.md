@@ -25,32 +25,23 @@ public:
     }
 };  
 
-class Trie {
-private: 
-    Node *root;
-public:
-    Trie() {
-        root = new Node();
-    }
-    int countInsert(string str) {
-        int count=1; // empty substring
-        int n=str.size();
-        for (int i=0; i<n; i++) {
-            Node* curr = root;
-            for (int j=i; j<n; j++) {
-                if (!curr->containsKey(str[j])) {
-                    count++;
-                    curr->put(str[j]);
-                } 
-                curr = curr->get(str[j]);
-            }
-        }
-        return count;
-    }
-};
-int countDistinctSubstrings(string &s)
+
+        
+int countDistinctSubstrings(string &str)
 {
-    Trie trie;
-    return trie.countInsert(s);
+    Node *root = new Node();
+    int count=1; // empty substring
+    int n=str.size();
+    for (int i=0; i<n; i++) {
+        Node* curr = root;
+        for (int j=i; j<n; j++) {
+            if (!curr->containsKey(str[j])) {
+                count++;
+                curr->put(str[j]);
+            } 
+            curr = curr->get(str[j]);
+        }
+    }
+    return count;
 }
 ```
