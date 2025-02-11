@@ -9,6 +9,13 @@ else return even;
 ```
 
 ## xor(^)
+
+```
+1 ^ 1 = 0
+1 ^ 0 = 1
+0 ^ 1 = 1
+0 ^ 0 = 0
+```
 ```
 n ^ 0 = n
 x ^ y = x^ y
@@ -16,12 +23,10 @@ x^x=0
 ```
 
 ## power of 2
-binary rep of 10 = 1010
-binary rep of 8 = 1000
-```
-x & (x-1) -> 0 then x is power of 2
-else no
-```
+binary rep of 8 = 1000 <br>
+binary rep of 7 = 0111 <br>
+if x is power of 2 <br>
+```x & (x-1) = 0``` 
 
 ## kth bit - lsb (kth bit from right)
 1. check if kth bit is set `x & (1<<k)`
