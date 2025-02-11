@@ -1,18 +1,19 @@
+
+https://www.naukri.com/code360/problems/complete-string_2687860
+
 ## Logic 
 - complexity without trie using arrays is O(n*m*m)
-- with trie O(n*m)
+- way-1 trie O(n*m) -> check if for each character the refernce node's `flag = true`
 - to optimise further ideas
-  - way-1 (doesnt work) sort the string to find longest prefix string <br>
+  - IDEA (doesnt work) sort the string to find longest prefix string <br>
     - eg: a,aaa,ab,abbb -> if ans is abbbb then final ans is set to abbbb
     - eg: a,aaaa,ab,abbb -> if ans if aaaaa even then final ans is set to abbbb
-  - way-2
-  ``` // stop when a prefi is not present and dont take that path
-    // instead of checking strings through arr, check them through the root
-    // by using dfs```
+  -  IDEA way-2
+    - when a prefix is not present and dont take that path (so no need to visit any other string on that path)
+    - instead of checking strings through arr, check them through the root
+    - by using dfs
 
-## Beta Code
 ```cpp
-#include <bits/stdc++.h>
 class Node {
 public:
     Node* links[26];
@@ -33,9 +34,11 @@ public:
     bool isEnd() {
         return flag;
     }
-
 };
+```
 
+## Code - way1
+```cpp
 class Trie {
 private: 
     Node* root;
@@ -67,12 +70,6 @@ string compareString(string a, string b) {
     return b;
 }
 string completeString(int n, vector<string> &a){
-    // check all strings and update your ans
-
-    // better solution
-    // stop when a prefi is not present and dont take that path
-    // instead of checking strings through arr, check them through the root
-    // by using dfs
     Trie trie;
     string ans = "";
     for (int i=0; i<n; i++) {
@@ -81,6 +78,53 @@ string completeString(int n, vector<string> &a){
     for (int i=0; i<n; i++) {
         if (trie.isCompletePrefix(a[i])) ans = compareString(ans, a[i]); 
     }
+    if (ans=="") return "None";
+    return ans;
+}
+```
+
+## way 2 - using dfs
+```cpp
+class Trie {
+private: 
+    Node* root;
+public: 
+    Trie() {
+        root = new Node();
+    }
+    void insertString(string word) {
+        Node* curr = root;
+        for (auto ch: word) {
+            if (!curr->get(ch)) curr->put(ch);
+            curr=curr->get(ch); 
+        }
+        curr->setEnd();
+    }
+
+    string dfsCompleteString(Node* curr, string ans="") {
+        if (!curr) curr=root;
+        string str = ans;
+        for (char ch='a'; ch<='z'; ch++) {
+            if (!curr->get(ch) || !curr->get(ch)->isEnd()) continue;
+            ans = compareString(  dfsCompleteString( curr->get(ch),str+ch ), ans  );
+        } 
+        return ans;
+    }
+
+    
+    string compareString(string a, string b) {
+        if ( (a.size() == b.size() && a<=b) ||(a.size() > b.size()) ) return a;
+        return b;
+    }
+};
+
+string completeString(int n, vector<string> &a){
+    Trie trie;
+    for (int i=0; i<n; i++) {
+        trie.insertString(a[i]);
+    }
+
+    string ans = trie.dfsCompleteString(NULL);
     if (ans=="") return "None";
     return ans;
 }
