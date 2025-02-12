@@ -41,14 +41,14 @@ public:
         Node* curr=root;
         int ans = 0;
         for (int i=31; i>=0; i--) {
-            int bit = (num>>i)&1;
+            int bit = ~((num>>i)&1);
             
-            if (curr->containsKey(!bit)) {
-                curr = curr->get(!bit);
+            if (curr->containsKey(bit)) {
+                curr = curr->get(bit);
                 ans = ans | (1<<bit); // because when comparing two number one has bit other !bit
                 // so xor is definitely 1 there
                 // same as ans+=pow(2,i);
-            } else curr = curr->get(bit);
+            } else curr = curr->get(~bit);
         }
         return ans;
     }
