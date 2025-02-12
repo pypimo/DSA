@@ -2,7 +2,7 @@
 https://www.naukri.com/code360/problems/complete-string_2687860
 
 ## Logic 
-- complexity without trie using arrays is O(n*m*m)
+- complexity without trie using arrays is O(n*n*m)
 - way-1 trie O(n*m) -> check if for each character the refernce node's `flag = true`
 - to optimise further ideas
   - IDEA (doesnt work) sort the string to find longest prefix string <br>
