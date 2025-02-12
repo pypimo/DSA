@@ -7,7 +7,13 @@ LSB = 0 -> even
 if (x&1) return odd;
 else return even;
 ```
-
+## complement(~)
+```
+int x=0;
+cout << ~x; // equals 4294967295
+ // not equal to 1
+// complement flips all the bits
+```
 ## xor(^)
 
 ```
