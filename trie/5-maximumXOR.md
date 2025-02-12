@@ -45,7 +45,9 @@ public:
             
             if (curr->containsKey(!bit)) {
                 curr = curr->get(!bit);
-                ans+=pow(2,i);
+                ans = ans | (1<<bit); // because when comparing two number one has bit other !bit
+                // so xor is definitely 1 there
+                // same as ans+=pow(2,i);
             } else curr = curr->get(bit);
         }
         return ans;
