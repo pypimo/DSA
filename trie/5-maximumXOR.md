@@ -69,7 +69,11 @@ public:
 - for every number-  we try to find the best possible number -> takes O(M)
 - total  = O(N*M) = O(N)
 ## debugging
-why ((num<<i) & 1) works but not  ((1<<i) & num)
-REASON
-(num<<i & 1) = 1 means ith bit is set wherease
-((1<<i) & num) > 0 means ith bit is set
+- why ((num<<i) & 1) works but not  ((1<<i) & num)
+- REASON
+- (num<<i & 1) = 1 means ith bit is set wherease
+- ((1<<i) & num) > 0 means ith bit is set
+
+- `~bit` not the same as `!bit`
+- bcause complemement reverses all bits in the bit representatoin
+- logical or gives the NOT version
