@@ -29,10 +29,12 @@ if x is power of 2 <br>
 ```x & (x-1) = 0``` 
 
 ## kth bit - lsb (kth bit from right)
-1. check if kth bit is set `x & (1<<k)`
-2. toggle kth bit `x ^ (1<<k)`
-3. set kth bit `x | (1<<k)`
-4. unset kth bit `x & ~(1<<k)`
+1. check if kth bit is set:
+    - if `x & (1<<k)` is non-zero
+    - if `(x>>k) & 1` is 1
+3. toggle kth bit `x ^ (1<<k)`
+4. set kth bit `x | (1<<k)`
+5. unset kth bit `x & ~(1<<k)`
 
 ## multiply/divide by 2 raised to k
 ```
