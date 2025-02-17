@@ -2,7 +2,7 @@
 https://www.geeksforgeeks.org/boyer-moore-majority-voting-algorithm/
 - why lo and hi doesnt work
 - eg: `1 2 1` or `1 0 1` so if you increase lo at default (prob) or hi at default (prob)
-```
+```cpp
   int n=nums.size(), lo=0, hi=n-1;
   while (lo<hi) {
       if (nums[lo]>nums[hi]) swap(nums[lo], nums[hi]); 
