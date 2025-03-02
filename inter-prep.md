@@ -1,3 +1,5 @@
+# resources
+https://leetcode.com/discuss/interview-question/6185127/Google-Interview-Question-Compilation/
 # mocks
 ## 1
 - sliding window
