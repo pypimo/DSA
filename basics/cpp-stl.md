@@ -16,6 +16,10 @@ m.count(k); // returns the no. of times key k is present
 - so if (m.count(k) && m[k]!=val...) {do..}
 - when `if (!m[key)` is used, {key,0} pair is created in map which ruins map.size()
 
+## erase
+- `map[key]=0` set the val to 0, but does not remove the key
+- `map.erase(key)` erases it
+
 ## ordered vs unordered maps
 - ordered (order is maintained) using tree
   - insertion - logn
