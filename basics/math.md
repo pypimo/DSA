@@ -24,3 +24,8 @@ int gcd(int a, int b) {
 - eg2 : -7%11 = 11-7=4
 
 ## parity = odd or even
+
+## getting upper float
+- when dividing x by y
+- add (y-1) to x
+- so `(x+(y-1))/y` gives upper bound
