@@ -31,6 +31,10 @@ m.count(k); // returns the no. of times key k is present
 ## desceding order map
 `map<int,int, greater<int>> mp;`
 
+## accessig the first element
+- after a map is sorted use
+- `mp.begin()->first; // used to get first key`
+  
 # strings
 - reversing string
 ```
