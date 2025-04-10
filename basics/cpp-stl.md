@@ -1,4 +1,5 @@
 # maps
+std::map is implemented as a balanced binary search tree (usually a Red-Black Tree)
 ## multimap
 
     multiple elements can have the same keys
@@ -34,6 +35,13 @@ m.count(k); // returns the no. of times key k is present
 ## accessig the first element
 - after a map is sorted use
 - `mp.begin()->first; // used to get first key`
+- cannot use (mp.begin() + n)->first to access the nth elements because they are not vectors and implemented as binary trees
+- instead use this
+```
+auto it = mp.begin();
+std::advance(it, n);
+auto key = it->first;
+```
   
 # strings
 - reversing string
