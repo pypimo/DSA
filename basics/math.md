@@ -29,3 +29,8 @@ int gcd(int a, int b) {
 - when dividing x by y
 - add (y-1) to x
 - so `(x+(y-1))/y` gives upper bound
+
+## product of i,j divisible by k
+- i*j%k==0 same as
+- `gcd(i,k) * gcd(j,k) % k == 0`
+- or precompute mod of nums[i] and nums[j] and check `(mod_values[i] * mod_values[j]) % k == 0`, if range of nums is low this helps and 
