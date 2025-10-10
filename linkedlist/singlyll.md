@@ -1,9 +1,4 @@
-# array to linked list
 ```cpp
-#include<bits/stdc++.h>
-#define ll long long
-using namespace std;
-
 class Node {
 	public:
 	int data;
@@ -18,9 +13,10 @@ class Node {
 		this->next = nullptr;
 	}
 };
+```
 
-
-
+#length
+```cpp
 int length(Node* head) {
 	int cnt=0;
 	Node* temp=head;
@@ -31,12 +27,11 @@ int length(Node* head) {
 	}
 	return cnt;
 }
+```
 
-int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-
-	//array to linked list
+# array to linked list
+```cpp
+void func() {
 	vector<int> arr = {2,3,4,5};
 	Node *head = new Node(arr[0]);
 	Node *mover = head;
@@ -47,11 +42,6 @@ int main() {
 		mover=temp;
 		cout << mover->data << " ";
 	}
-
-	cout << length(head);
-	
-
-	return 0;
 }
 ```
 
