@@ -15,7 +15,7 @@ class Node {
 };
 ```
 
-#length
+# length
 ```cpp
 int length(Node* head) {
 	int cnt=0;
