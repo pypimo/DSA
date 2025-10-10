@@ -40,6 +40,7 @@ int main() {
 	vector<int> arr = {2,3,4,5};
 	Node *head = new Node(arr[0]);
 	Node *mover = head;
+    cout << mover->data << " ";
 	for (int i=1; i<arr.size(); i++) {
 		Node *temp = new Node(arr[i]);
 		mover->next = temp;
