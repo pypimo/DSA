@@ -32,10 +32,29 @@ time : O(V+2E) + O(V) (stack space)
 time : O(V+2E) + O(V) (stack space) 
 ## using dfs
 - for a cycle a node should be visited by any other node already, but it shuold also be in the same path
-- so pathVis array (pass by copy at each call)
-- if a neighbor is already path vis -> return true (cycle present)
-- when dfs ends set pathVis to 0 (dont need to since pass by copy)
+- so pathVis array (pass by copy at each call) -> TLE if V+E is large since it become V+E*V
+- if a neighbor is already pathVis -> return true (cycle present)
+- when dfs ends set pathVis to 0
 - return false
+```cpp
+bool dfs(int u, int parent, vector<int> adj[], vector<int> &vis, vector<int> &pathVis) {
+    vis[u]=1; pathVis[u]=1;
+    for (int x : adj[u]) {
+        if (pathVis[x]) return true;
+        if (!vis[x] && dfs(x, u, adj, vis, pathVis)) return true;   
+    }
+    pathVis[u]=0;
+    return false;
+}
+
+int check() {  
+    vector<int> vis(A+1, 0), pathVis(A+1, 0);
+    for (int i=2; i<=A; i++) {
+        if (!vis[i] && dfs(i,-1, adj, vis, pathVis)) return 1;
+    }
+    return 0;
+}
+```
 ## using bfs
 - use kahns to get topological ordering
 - if size of topo < n return true (cycle present)
