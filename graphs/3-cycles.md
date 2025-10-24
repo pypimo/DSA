@@ -48,8 +48,8 @@ bool dfs(int u, int parent, vector<int> adj[], vector<int> &vis, vector<int> &pa
 }
 
 int check() {  
-    vector<int> vis(A+1, 0), pathVis(A+1, 0);
-    for (int i=2; i<=A; i++) {
+    vector<int> vis(N+1, 0), pathVis(N+1, 0);
+    for (int i=1; i<=N; i++) {
         if (!vis[i] && dfs(i,-1, adj, vis, pathVis)) return 1;
     }
     return 0;
