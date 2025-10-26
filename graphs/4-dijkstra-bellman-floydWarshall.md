@@ -30,8 +30,10 @@ https://stackoverflow.com/questions/26547816/understanding-time-complexity-calcu
   - else -ve loop
 - travel all edges and update dist for each node
 - final loop nth time, if any distance updates - negative cycl 
+```
 time: O(V*E) 
 space : O(V)
+```
 ## floyd warshall 
 - multisource distance (dp kind of approach)
 - try to travel via every vertex for each source and destination
