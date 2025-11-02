@@ -1,6 +1,5 @@
-# Implmenting
 ## binary search
-```
+```cpp
     int lo=0, hi=n-1;
     while(lo<=hi) {
         int mid = lo+(hi-lo)/2;
@@ -12,7 +11,7 @@
 ```
 ## lower bound 
 if all elemets strictly smaller return index n
-```
+```cpp
 while (low <= high) {
         int mid = low+(high-low)/2;
         // maybe an answer
@@ -28,7 +27,7 @@ while (low <= high) {
 ```
 ## upper bound
 if not prsent returns index n
-```
+```cpp
 while (low <= high) {
         int mid = low+(high-low)/2;
         // maybe an answer
@@ -43,10 +42,11 @@ while (low <= high) {
 }
 ```
 ## C++ STL
-## binary search
-returns true or false
-## lower bound
-returns index of first values >=target
-## upper bound
-returns index of first value > target
-`upper_bound(arr.begin(), arr.end(), target)-arr.begin();`
+- binary search -> returns true or false
+- lower bound -> returns pointer index to first values >=target
+- upper bound -> returns pointer index of first value > target
+
+```upper_bound(arr.begin(), arr.end(), target)-arr.begin();```
+## single element in sorted array
+https://leetcode.com/problems/single-element-in-a-sorted-array/
+- sometimes look at mid and see if there are properties in the index that can be used
