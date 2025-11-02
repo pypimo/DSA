@@ -42,3 +42,19 @@ int search(vector<int>& nums, int target) {
       else hi=mid-1;
   }
 ```
+# min
+```cpp
+int findMin(vector<int>& nums) {
+    int n = nums.size(), l=0, r=n-1, k=-1;
+    while(l<=r) {
+        int mid=l+(r-l)/2;
+        if (nums[mid]<=nums[0] && nums[mid]<=nums[n-1]) {
+            k=nums[mid];
+            r=mid-1;
+        } else {
+            l=mid+1;
+        }
+    }
+    return k==-1 ? nums[0] : k;  
+}
+```
