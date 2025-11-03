@@ -50,3 +50,21 @@ while (low <= high) {
 ## single element in sorted array
 https://leetcode.com/problems/single-element-in-a-sorted-array/
 - sometimes look at mid and see if there are properties in the index that can be used
+## peak element
+```cpp
+int findPeakElement(vector<int>& nums) {
+    int n = nums.size(), lo=0,hi=n-1;
+    while(lo<=hi) {
+        int mid = lo + (hi-lo)/2, curr=nums[mid],prev=INT_MIN,nxt=INT_MIN; 
+
+        if (mid-1>=0) prev = nums[mid-1];
+        if (mid+1<n) nxt = nums[mid+1];
+
+        if (prev<curr && nxt<curr) return mid;
+        if (prev>curr) {
+            hi = mid-1;
+        } else lo=mid+1;
+    }
+    return 0;
+}
+```
