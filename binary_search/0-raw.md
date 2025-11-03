@@ -68,3 +68,10 @@ int findPeakElement(vector<int>& nums) {
     return 0;
 }
 ```
+## Nth root (sane for square root)
+- Start binary search with low as 1 and high as M.
+- Find mid of the range and multiply it with itself N times to get Nth power of mid.
+- If Nth power of mid equals M, return mid as the N-th root.
+- If Nth power of mid is less than M, shift search to the right half.
+- If Nth power of mid is greater than M, shift search to the left half.
+- If no integer root is found after the loop, return -1.
