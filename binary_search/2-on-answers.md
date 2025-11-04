@@ -1,3 +1,5 @@
+## binary search on answers
+
 https://leetcode.com/problems/koko-eating-bananas/description/
 
 https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/
@@ -5,6 +7,7 @@ https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/descript
 - greedy doesnt always work at times and we need to perform a search on the complete ansewr range
 - binary search comes in handy here
 
+## changing the ques to fit to binary search
 https://takeuforward.org/data-structure/aggressive-cows-detailed-solution/
 ```cpp
 int aggressiveCows(vector<int> &nums, int k)
@@ -25,3 +28,4 @@ int aggressiveCows(vector<int> &nums, int k)
       return ans;
 }
 ```
+https://leetcode.com/problems/split-array-largest-sum/description/
