@@ -53,3 +53,6 @@ double minimiseMaxDistance(vector<int> &arr, int k){
 	return ans;
 }
 ```
+## setting lo and hi
+- sometimes you dont need lo to be 1 and hi to be the max possible int
+- you can do some optimisation and lo = max(arr) and hi = sum(arr)
