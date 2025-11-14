@@ -24,6 +24,12 @@ also V^2 = E but since E can be smaller than V sometimes so (V+E)
 https://stackoverflow.com/questions/26547816/understanding-time-complexity-calculation-for-dijkstra-algorithm
 
 ## negative edges --> bellman ford
+- A shortest path in a graph with V vertices can have at most (V − 1) edges
+(because if it had V edges, a vertex must repeat → that is a cycle)
+- To correctly compute all shortest paths,
+we must allow paths of length 1 edge, 2 edges, ..., up to (V − 1) edges.
+
+- Each iteration of Bellman-Ford (one pass over all edges E) allows paths that are one edge longer to become correct.
 - look for n-1 times (nth time to check for negative cycle, --> if changes in dist = -ve cycle):
   - n-1 times because for a nodes (if total nodes are n), a unique path can at max contain n-1 edges
   - if any more than that, then there must be a loop (a vertex is repeated) so shortest path can be shorter
