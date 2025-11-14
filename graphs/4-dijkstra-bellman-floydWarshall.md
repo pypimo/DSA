@@ -1,10 +1,5 @@
-## complexity
-|V| = E  = V*(V-1)  = |V^2|-|V|
+E  = V*(V-1)  = |V^2|-|V|
 does E is a much tighter bound
-
-- bellamn ford is V*E or V^3
-- dijkstra = V^2
-- floyd warshall V^3
 
 ## shortest path in unweighed graph (directed/undirected)
 - bfs from source, update node distance when encountered for the first time
