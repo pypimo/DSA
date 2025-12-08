@@ -29,3 +29,12 @@ doubly ll, n searhes after u search something, if repeated we only ount the late
 - so if a query is reppeated, correct its prev positiion , chnge the back an next, and delete the prev
 - so now we only have the most reent n searches
 - time is O(n), space is O(n)
+
+# amz
+hn it was easy but I fumbled while optimising
+
+1. how to use queue push pop for stack
+2. simple map array kind ques
+3. given an array of strings size n, where string len max is m generate a string that differs with every other by one character, print -1 if it's impossible
+
+couldn't optimise the last n^2 * m bata diya
