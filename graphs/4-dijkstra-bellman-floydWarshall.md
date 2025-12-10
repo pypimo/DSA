@@ -12,6 +12,50 @@ does E is a much tighter bound
 - that is not needed so use sets to erase, but time complexity dosent change as erase takes log V time
 - can use a queue, but it makes no greedy use of analysisng shortset distance first, so its a brute force to visit al nodes an ypdate distances (unnecessary iterations)
 ```
+vector<int> dijkstra(int V, vector<vector<pair<int,int>>>& adj, int src) {
+        // Distance array initialized to large value
+        vector<int> dist(V, 1e9);
+
+        // Min-heap storing {distance, node}
+        priority_queue<pair<int,int>, vector<pair<int,int>>, 
+                       greater<pair<int,int>>> pq;
+
+        // Distance to source is 0
+        dist[src] = 0;
+
+        // Push source into heap
+        pq.push({0, src});
+
+        // Process nodes until heap is empty
+        while (!pq.empty()) {
+            // Extract node with minimum distance
+            int d = pq.top().first;
+            int node = pq.top().second;
+            pq.pop();
+
+            // Skip if this distance is outdated
+            if (d > dist[node]) continue;
+
+            // Traverse all adjacent neighbors
+            for (auto it : adj[node]) {
+                int next = it.first;
+                int wt = it.second;
+
+                // Relaxation check
+                if (dist[node] + wt < dist[next]) {
+                    // Update distance
+                    dist[next] = dist[node] + wt;
+
+                    // Push updated distance into heap
+                    pq.push({dist[next], next});
+                }
+            }
+        }
+        return dist;
+    }
+};
+```
+```
 time: O((E+V)*logV)
 space: O(V)
 also V^2 = E but since E can be smaller than V sometimes so (V+E)
