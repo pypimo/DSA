@@ -43,6 +43,7 @@ int search(vector<int>& nums, int target) {
   }
 ```
 # min
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 ```cpp
 int findMin(vector<int>& nums) {
     int n = nums.size(), l=0, r=n-1, k=-1;
