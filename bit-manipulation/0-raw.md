@@ -90,10 +90,31 @@ else if (X==A) X=B;
 A+B = (A^B) + 2(A&B)
 A+B = (A|B) + (A&B)
 ```
-## counting setbits
+## counting setbits -1 inbuilt
 ```
 __builtin_popcount(x); //for int
 __builtin_popcountll(x); //for long long
+```
+## counting setbits -2 Brian Kernighan’s algorithm
+```
+while (n) {
+  n &= (n - 1); // Turn off the rightmost set bit
+  count++;
+  // Increment the count
+}
+```
+```
+n      = 101100
+n - 1  = 101011
+----------------
+n&(n-1)= 101000   <-- rightmost set bit is removed
+```
+## counting setbits -3
+```
+while(n > 0) {
+    if(n & 1) count++;
+    n >>= 1;
+}
 ```
 
 ## bit rep
