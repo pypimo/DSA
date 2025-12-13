@@ -42,6 +42,10 @@ if x is power of 2 <br>
 4. set kth bit `x | (1<<k)`
 5. unset kth bit `x & ~(1<<k)`
 
+## more
+7. Find first set lsb `x & (x-1)` -> thus when x&x-1 is 0 it imples x is power of 2
+8. get position of 1st lsb thats set `(x & (x-1)) ^ x` 
+
 ## multiply/divide by 2 raised to k
 ```
 x << k // mutliple
@@ -97,7 +101,7 @@ __builtin_popcountll(x); //for long long
 ```
 ## counting setbits -2 Brian Kernighan’s algorithm
 ```
-while (n) {
+while (n>0) {
   n &= (n - 1); // Turn off the rightmost set bit
   count++;
   // Increment the count
