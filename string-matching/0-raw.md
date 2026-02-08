@@ -1,0 +1,4 @@
+- Naive String Matching : A Simple Algorithm that works in O(m x n) time where m is the length of the pattern and n is the length of the text.
+- Knuth-Morris-Pratt (KMP) Algorithm It preprocesses pattern and works in O(m + n) Time.
+- Rabin-Karp Algorithm : It uses hashing to compare the pattern with the text. It works in O(m x n) Time in worst case,
+- Aho-Corasick Algorithm : A deterministic finite automaton (DFA) based algorithm and works in O(m + n) time.
