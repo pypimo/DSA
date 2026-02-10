@@ -146,6 +146,9 @@ s.erase(it);
 ```
 multiset erase takes O(m) time complexity, m being the number of elements in a set vector erase takes O(n) time complexity since elements have to be shifted by one position
 
+## erase
+erases all occurence `s.erase(x)` of x from multiset s
+
 # dequeue
 front()
 back()
