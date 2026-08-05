@@ -181,3 +181,10 @@ tuple<int,int,int> my_tuple;
 make_tuple(x,y,z);
 get<0>(my_tuple); // can access using index
 ```
+## int - reference
+can't use `int &vis[]` in function description, as this creates an int of reference 
+instead use `vector<int> &vis, int (&vis)[]` in function description
+
+## vectors can't use auto& [u,v]
+if we have a vector of vectors for adjacency list, we can't use `for (auto &[u,v]: adj)`
+We can only use `for (auto &edge : adj)`
