@@ -30,7 +30,8 @@ int stoneGameII(vector<int>& piles) {
 
 # Stone Game V
 https://leetcode.com/problems/stone-game-v
-
+the ans keeps changing for each division so we should calculate all]
+dp[i][j] = sum[i][j] + (score for min sum array)
 ```cpp
 int dp[510][510];
 int stoneGameV(vector<int>& stoneValue) {
