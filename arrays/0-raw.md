@@ -8,7 +8,7 @@ majority element in n-size array ie frequency >= n/2
 * Ques find elements with freq >= n/3
   * https://leetcode.com/problems/majority-element-ii/solutions/63520/Boyer-Moore-Majority-Vote-algorithm-and-my-elaboration
   * keep 2 candidates and counters, increment respective counter on match, but on no match with any decremenet both counters:
-  * reason: if we only subtract with one, we can end up decrementing one majority candidate, that would still have a counter, so we wouldn't update candidate, but the second candidate could have been decremented to 0 and changed (one trick can be to subtract from the min counter) for eg {1,1,1,1,3,2,2,2,2} -> if we were to just subtract from one candidate say 1, then 1 counter would be 0 while the counter for 3 would stay 1
+  * reason: if we only subtract with one, we can end up decrementing one majority candidate, that would still have a counter, so we wouldn't update candidate, but the second candidate could have been decremented to 0 and changed (one trick can be to subtract from the min counter) for eg {1,1,1,1,3,2,2,2,2} -> if we were to just subtract from one candidate1 = 1, then candidate1 = 1, candidate2=3 and by the end counter would be 0, but 2 wasn't even a candidate
 ## dutch national flag 
 https://leetcode.com/problems/sort-colors/solutions/3464652/beats-100-c-java-python-javascript-two-pointer-dutch-national-flag-algorithm/
 * my initial approach - wrong
