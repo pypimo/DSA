@@ -39,8 +39,8 @@ Solution
     }
 ```
 
-## two pointer algo
+## Two pointer algo
 https://www.geeksforgeeks.org/two-pointers-technique/
 
-## sliding window
+## Sliding window
 https://www.geeksforgeeks.org/window-sliding-technique/
