@@ -1,12 +1,14 @@
-## Moore's voting algo
+## Boyer-Moore voting algo
 https://www.geeksforgeeks.org/boyer-moore-majority-voting-algorithm/
-majority element in n-size array ie frequency >= n/22 ways
-* sort and see the mid element - nlogn
-* or keep a current element and counter, incremenet counter if same ele found, else decrement. If counter is 0, change the current ->  O(n) - 2passes needed if majority isnt guarantedd
+majority element in n-size array ie frequency >= n/2
+* method1: sort and see the mid element - nlogn
+* moore's algo or keep vars candidate and counter, incremenet counter if same ele found, else decrement. If counter is 0, change the current ->  O(n) - 2passes needed if majority isnt guaranteed:
   * because {1,2,3} 3 will be the ans but its not majority
   * if even length {1,2,3,4,7,7} - 7 is the ans but its not majority
-* for n/3 majority
- https://leetcode.com/problems/majority-element-ii/solutions/63520/Boyer-Moore-Majority-Vote-algorithm-and-my-elaboration
+* Ques find elements with freq >= n/3
+  * https://leetcode.com/problems/majority-element-ii/solutions/63520/Boyer-Moore-Majority-Vote-algorithm-and-my-elaboration
+  * keep 2 candidates and counters, increment respective counter on match, but on no match with any decremenet both counters:
+  * reason: if we only subtract with one, we can end up decrementing one majority candidate, that would still have a counter, so we wouldn't update candidate, but the second candidate could have been decremented to 0 and changed (one trick can be to subtract from the min counter) for eg {1,1,1,1,3,2,2,2,2} -> if we were to just subtract from one candidate say 1, then 1 counter would be 0 while the counter for 3 would stay 1
 ## dutch national flag 
 https://leetcode.com/problems/sort-colors/solutions/3464652/beats-100-c-java-python-javascript-two-pointer-dutch-national-flag-algorithm/
 * my initial approach - wrong
