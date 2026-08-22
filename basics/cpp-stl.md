@@ -81,6 +81,24 @@ char c = toupper('a'); // if char type not specified, it returns int of
 char c2 = tolower('A');
 ```
 - strtok
+  * destroys original string by making the delimiters \0, so make a copy first usung strcpy
+  * ```
+    int main() {
+    // The string to split
+    char str[] = "Learn,Code,Share,Repeat";
+    
+    // Split by commas
+    char *token = strtok(str, ",");
+    
+    // Loop through the rest of the tokens
+    while (token != NULL) {
+        printf("%s\n", token);
+        token = strtok(NULL, ","); // Note the NULL here
+    }
+    
+    return 0;
+}
+    ```
 - string erase overloaded func (https://www.geeksforgeeks.org/stdstringerase-in-cpp/)
 https://www.geeksforgeeks.org/strtok-strtok_r-functions-c-examples/
 ```
