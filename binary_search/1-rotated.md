@@ -1,5 +1,5 @@
 # index of target in roatated array
-## (non-duplicate)
+## (non-duplicate) https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 - either arr[mid], arr[hi] is sorted or arr[lo] to arr[mid]
 - find target in the sorted portions and if not in leftover side
 ```cpp
@@ -19,7 +19,7 @@ int search(vector<int>& nums, int target) {
   return -1;
 }
 ```
-## duplicates 
+## duplicates https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
 - lo++ when arr[lo]=arr[mid]
 - to get index just check if arr[hi] is target or else arr[lo] or else arr[mid] (if first occuring index needed in actual sorted array)
 - LOGIC: 
