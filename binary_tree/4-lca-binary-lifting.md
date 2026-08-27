@@ -46,6 +46,8 @@ public:
 };
 ```
 - another method
+- note: we can't use reference/copy variables for below by putting them in function parameter, as we don't want right subtree to have those seen values of left subtree because if that happens LCA will be incorrectly marked as the right subtree element instead of root
+- eg: 3 (root), 5 (left), 1 (right), -> if we pass variables, p=5, q=1, seen at 1 will be true for both and 1 will be the ans which is wrong 
 ```
 TreeNode *find1, *find2, *ans=NULL;
 // dfs to look left, then right - at whichever you see p and q first 
