@@ -33,17 +33,25 @@ public:
 
         dfs(root, p, path1);
         dfs(root, q, path2);
-        
-        // PRINTING PATHS
-        // for (auto x : path1) {
-        //     cout << x->val << " ";
-        // }
+
         for (int i=0; i<min(path1.size(), path2.size()); i++) {
             if (path1[i]==path2[i]) ans = path1[i];
         }
         return ans;
     }
 };
+```
+better yet
+```cpp
+bool dfs(TreeNode* curr, TreeNode* goal, vector<TreeNode*>& path) {
+    if (curr==NULL) return false;
+    if (curr==goal || dfs(curr->left,goal, path) || dfs(curr->right,goal, path)){ 
+        path.push_back(curr);
+        return true;
+    }   
+    return false;
+}
+// then reverse in main
 ```
 - another method - see left and right
 - note: we don't want right subtree to have those seen values of left subtree because if that happens LCA will be incorrectly marked as the right subtree element instead of root
