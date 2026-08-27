@@ -9,12 +9,15 @@ int maxDepth(TreeNode* root) {
 }
 ```
 ## check for balanced bt
-- can use 2 functions, bool check and maxDepth
-- after getting maxDepth of left and right check
+### USING 2 FUNCTIONS
+- bool check and maxDepth
+- after getting maxDepth of left and right
 - if check(node->left) && check(node->right) && (abs(maxDepth(node->left)-maxDepth(node->right))<=1) return true;
 - return false;
+- complexity : n calls for dfs check, inside the call we visit the tree for the maxDepth, even if it's subtrees were calculated before so O(n^2)
+- to make this O(n) run maxDepth and store those ans in array, then dfs for bool check
 
-USING ONE FUNCTION ONLY
+### USING ONE FUNCTION ONLY
 ![chrome_uhzWLnOLDl](https://github.com/user-attachments/assets/45309f6e-c401-498c-8f30-629bed269bb7)
 
 
