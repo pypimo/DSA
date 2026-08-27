@@ -1,6 +1,6 @@
 # LCA O(n)
 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
-- find the two nodes and identify last common node in that path
+- find last common node in path
 ```cpp
   class Solution {
 public: 
@@ -45,8 +45,8 @@ public:
     }
 };
 ```
-- another method
-- note: we can't use reference/copy variables for below by putting them in function parameter, as we don't want right subtree to have those seen values of left subtree because if that happens LCA will be incorrectly marked as the right subtree element instead of root
+- another method - see left and right
+- note: we don't want right subtree to have those seen values of left subtree because if that happens LCA will be incorrectly marked as the right subtree element instead of root
 - eg: 3 (root), 5 (left), 1 (right), -> if we pass variables, p=5, q=1, seen at 1 will be true for both and 1 will be the ans which is wrong 
 ```cpp
 TreeNode *find1, *find2, *ans=NULL;
@@ -66,6 +66,25 @@ pair<int,int> dfs(TreeNode* curr){
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     find1=p; find2=q;
     dfs(root);
+    return ans;
+}
+```
+```cpp
+// using references
+void dfs(TreeNode* curr, int &f1, int &f2){
+    if (curr==NULL) return;
+    // left and right subtree don't need to know about each other
+    int leftf1=0, leftf2=0, rightf1=0, rightf2=0;
+    if (ans==NULL) dfs(curr->left, leftf1, leftf2);
+    if (ans==NULL) dfs(curr->right, rightf1, rightf2);
+    if (curr==find1 || leftf1 || rightf1) f1=1; 
+    if (curr==find2 || leftf2 || rightf2) f2=1; 
+    if (ans==NULL && f1 && f2) ans=curr;
+}
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    find1=p; find2=q;
+    int f1=0, f2=0;
+    dfs(root, f1, f2);
     return ans;
 }
 ```
