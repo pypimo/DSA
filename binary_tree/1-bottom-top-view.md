@@ -50,12 +50,10 @@ vector <int> bottomView(Node* root) {
             while(size--) {
                 Node* curr = q.front().first;
                 int dist = q.front().second;
-                if (m2[dist]) m[dist].push_back(curr->data);
-                else {
-                    m[dist] = {curr->data};
-                }
+                if (m2[dist]) m2[dist].push_back(curr->data);
+                else m2[dist] = {curr->data};
+                m[dist] = m2[dist];
                 q.pop();
-                 
                 if (curr->left!=NULL) q.push({curr->left, dist-1});
                 if (curr->right!=NULL) q.push({curr->right, dist+1});
             }
