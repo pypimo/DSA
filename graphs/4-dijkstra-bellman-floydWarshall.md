@@ -95,3 +95,4 @@ space : O(V)
     }
   }
 ```
+the shortest distance from any vertex to itself is initialized to 0. If a graph contains a negative cycle, the algorithm will eventually use that cycle to find a path from a vertex back to itself with a total cost less than 0.
