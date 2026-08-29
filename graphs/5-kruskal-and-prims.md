@@ -36,6 +36,7 @@ time: O((V+E)*logV)
 <hr>
 
 # Kruskal's Algo
+- Disjoint Sets
 - using rank (somewhat similar to height of tree)
 - using size (equivalent to total number of nodes)
 time: O(n*log n ) if n disjoint sets
@@ -124,6 +125,10 @@ int main() {
     return 0;
 }
 ```
+- sort the edges
+- traverse and use unionByRank(u,v)
+- if ult_u!=ult_v ans+=wt
+- Time complexity ElogE, disjoint set is alpha something which is basically constamt
 ## Flatten 2D array
 - if grid is n*m
 - then let parent and ranks be of sizes n*m
