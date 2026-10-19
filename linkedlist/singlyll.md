@@ -152,3 +152,25 @@ int length(Node* head) {
 ## Floyd’s Cycle-Finding Algorithm
 https://www.youtube.com/watch?v=PvrxZaH_eZ4
 - imagine this like spinning planets, the faster a planet completes its revolution, the more often it can be spotted from the slower planet
+```cpp
+struct ListNode {
+    int val;
+    ListNode* next;
+};
+
+bool hasCycle(ListNode* head) {
+    ListNode* slow = head;
+    ListNode* fast = head;
+
+    while (fast != nullptr && fast->next != nullptr) {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast) {
+            return true;
+        }
+    }
+
+    return false;
+}
+```
