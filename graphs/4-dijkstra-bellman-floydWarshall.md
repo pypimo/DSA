@@ -78,6 +78,39 @@ we must allow paths of length 1 edge, 2 edges, ..., up to (V − 1) edges.
 time: O(V*E) 
 space : O(V)
 ```
+```cpp
+vector<int> bellmanFord(int V, vector<vector<int>>& edges, int src) {
+    
+    // Initially distance from source to all 
+    // other vertices is not known(Infinite).
+	vector<int> dist(V, 1e8);
+	dist[src] = 0;
+  
+	// Relaxation of all the edges V times, not (V - 1) as we
+    // need one additional relaxation to detect negative cycle
+	for (int i = 0; i < V; i++) {
+	    
+		for (vector<int> edge : edges) {
+			int u = edge[0];
+			int v = edge[1];
+			int wt = edge[2];
+			if (dist[u] != 1e8 && dist[u] + wt < dist[v]) {
+			    
+                // If this is the Vth relaxation, then there is
+                // a negative cycle
+                if(i == V - 1)
+                    return {-1};
+               
+                // Update shortest distance to node v
+                dist[v] = dist[u] + wt;
+            }
+		}
+	}
+
+    return dist;
+}
+
+```
 ## floyd warshall 
 - multisource distance (dp kind of approach)
 - try to travel via every vertex for each source and destination
