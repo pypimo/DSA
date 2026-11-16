@@ -29,6 +29,20 @@ public:
         }
 
 }
+
+// can also be written as
+class TreeNode {
+public:
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+
+    TreeNode(int data) : val(data), left(nullptr), right(nullptr) {}
+    TreeNode(int data, TreeNode* l, TreeNode* r) : val(data), left(l), right(r) {}
+};
+
+TreeNode* newNode = new TreeNode(5);
+
 ```
 ## boundary traversal
 - left subtree is left boundary
