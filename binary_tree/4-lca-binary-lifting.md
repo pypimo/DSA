@@ -17,17 +17,10 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 class Solution {
 public: 
     bool dfs(TreeNode* curr, TreeNode* goal, vector<TreeNode*>& path) {
+        if (curr==NULL) return false;
+        path.push_back(curr);
         if (curr==goal) return true;
-        if (curr->left!=NULL) {   
-            path.push_back(curr);
-            if (dfs(curr->left,goal, path)) return true;
-        }
-        if (curr->right!=NULL) {
-            path.push_back(curr);
-           if (dfs(curr->right,goal, path)) return true;
-        }
-        // only one needed here bcz if both left and right null, we want to remove this node
-        // since we would have added this leaf node using curr->left or right
+        if (dfs(curr->left, goal, path) || dfs(curr->right, goal, path)) return true;
         path.pop_back();
         return false;
     }
