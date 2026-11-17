@@ -31,8 +31,6 @@ public:
         vector<TreeNode*> path1,path2;
         dfs(root, p, path1);
         dfs(root, q, path2);
-        path1.push_back(p);
-        path2.push_back(q);
         for (int i=0; i<min(path1.size(), path2.size()); i++) {
             if (path1[i]==path2[i]) ans = path1[i];
         }
